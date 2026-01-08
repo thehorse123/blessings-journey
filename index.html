@@ -1,0 +1,3418 @@
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- UTF-8 Character Encoding for Emojis and Special Characters -->
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <!-- Prevent Cloudflare Rocket Loader from causing preload warnings -->
+    <meta name="cloudflare-optimization" content="false">
+    <script data-cfasync="false" src="https://cdn.jsdelivr.net/npm/@cfasync/empty@1"></script>
+    
+    <!-- CRITICAL: Emoji & Symbol Fix for Tencent Cloud Server -->
+    <script>
+      // Ensure proper document encoding for emojis on Tencent Cloud
+      (function() {
+        // Log encoding verification
+        console.log('✅ Document charset:', document.characterSet);
+        console.log('✅ Emoji support: ⭐ 🏆 💬 ✅ ❌ 🎯 💰 🔊 💳 ✨ 🔄');
+        
+        // Verify all critical emojis
+        window.emojiCheck = {
+          star: '⭐',
+          trophy: '🏆',
+          chat: '💬',
+          check: '✅',
+          cross: '❌',
+          target: '🎯',
+          money: '💰',
+          speaker: '🔊',
+          card: '💳',
+          sparkle: '✨',
+          refresh: '🔄',
+          window: '🪟',
+        };
+        
+        console.log('📱 Tencent Cloud emoji system initialized!');
+      })();
+    </script>
+    
+    <style>
+            /* Fill gap between brand and blessing-banner */
+            .brand {
+              margin-bottom: 0 !important;
+            }
+            .blessing-banner {
+              margin-top: 0 !important;
+            }
+      html, body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+        background: #000;
+        display: block;
+      }
+      
+      .app-frame {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        min-height: 100vh;
+        background: #000;
+      }
+      
+      .mobile-shell {
+        width: 390px;
+        max-width: 390px;
+        min-height: 100vh;
+        background: #0b0b0b;
+        position: relative;
+        overflow-y: auto;
+        overflow-x: hidden;
+      }
+        /* Active Users Status Box Styles */
+        #active-users-status {
+          position: absolute;
+          top: 0.2cm;
+          right: 0.2cm;
+          width: 1.7cm;
+          height: 1cm;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: -1.02cm;
+          background: rgba(20, 30, 60, 0.55);
+          border-radius: 0.15cm;
+          box-shadow: 0 1px 6px 0 rgba(40, 80, 120, 0.18);
+          border: 1px solid rgba(180, 220, 255, 0.35);
+          backdrop-filter: blur(5px);
+          z-index: 1000;
+        }
+        .active-status {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: -1.08cm;
+        }
+        .pulse-dot {
+          width: 0.5em;
+          height: 0.5em;
+          border-radius: 50%;
+          background: radial-gradient(circle at 60% 40%, #39ff14 80%, #0f3 100%, #0a0 120%);
+          box-shadow: 0 0 8px 2px #39ff14, 0 0 2px 1px #0f3;
+          margin-right: 0.35em;
+          animation: pulseDot 1.5s infinite;
+          will-change: transform;
+          transform: translate3d(0, 0, 0);
+          backface-visibility: hidden;
+        }
+        @keyframes pulseDot {
+          0% { transform: scale(1) translate3d(0, 0, 0); filter: brightness(1.2); }
+          50% { transform: scale(1.25) translate3d(0, 0, 0); filter: brightness(2.2); }
+          100% { transform: scale(1) translate3d(0, 0, 0); filter: brightness(1.2); }
+        }
+        .active-label {
+          color: #eafcff;
+          font-size: 0.8em;
+          font-weight: 600;
+          letter-spacing: 0.03em;
+          text-shadow: 0 0 2px #39ff14, 0 0 6px #0f3;
+        }
+        .user-count {
+          color: #bfeaff;
+          font-size: 0.8em;
+          font-weight: 500;
+          text-align: center;
+          transition: opacity 0.5s;
+          text-shadow: 0 0 2px #39ff14, 0 0 6px #0f3;
+        }
+        #c2-container #pwyw {
+          display: none !important;
+        }
+    </style>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Divine Win — Blessings Journey</title>
+    <!-- Performance: DNS prefetch and preconnect for critical resources -->
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Load Google Fonts with display=swap for better performance -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Playfair+Display+SC:wght@700&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+    <!-- Preload critical Phase 1 images for faster initial render -->
+    <link rel="preload" as="image" href="phase-1-media/header12.webp">
+    <link rel="preload" as="image" href="phase-1-media/logo1.gif">
+    <link rel="preload" as="image" href="phase-1-media/wheel12.gif">
+  
+  <!-- CRITICAL CSS - Inline for faster render -->
+  <style>
+    /* Inline critical CSS for above-the-fold content */
+    html, body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+      background: #000;
+      display: block;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    .app-frame {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      min-height: 100vh;
+      background: #000;
+    }
+    .mobile-shell {
+      width: 390px;
+      max-width: 390px;
+      min-height: 100vh;
+      background: #0b0b0b;
+      position: relative;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+    header { margin-bottom: 0; padding-bottom: 0; z-index: 999; }
+  </style>
+  
+  <!-- CRITICAL: CSS must render-block to prevent layout shift (FOUC) -->
+  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./chainlock-styles.css">
+  <!-- Phase 1: Load critical audio and media preloader -->
+  <script defer src="./phase1-audio-loader.js"></script>
+  <!-- Phase 1.5: Spin button listener (loads Payhip on first Spin) -->
+  <script defer src="./phase1.5-spin-loader.js"></script>
+  <!-- Main application script (deferred for better performance) -->
+  <script defer src="./script.js"></script>
+  <!-- Phase 2: Integrated in script.js - loads when Continue button is clicked -->
+  </head>
+  <body>
+    <!-- Music Permission Overlay -->
+    <div id="music-permission-overlay" style="position:fixed;left:0;top:0;width:100vw;height:100vh;z-index:9999;background:rgba(20,20,30,0.92);display:flex;align-items:center;justify-content:center;">
+  <button id="allow-music-btn" style="font-size:2rem;padding:1em 2em;border-radius:2em;background:linear-gradient(90deg,#ffe066,#ff6b81);color:#222;font-weight:700;box-shadow:0 4px 24px #0006;border:none;outline:none;cursor:pointer;">Allow Music <span aria-label="speaker" role="img">🔊</span></button>
+    </div>
+    <div class="app-frame">
+      <div class="mobile-shell">
+        <div class="app">
+          <div id="piggy-tooltip" class="floating-tooltip" style="display:none;">💰 Piggy Bank — a shielded wallet where your money stays secure and untouched by anyone else.</div>
+      
+      <!-- Floating Blessing Bubbles (Wallet: PB, WB, TB) - Now inside mobile-shell -->
+      <div class="blessing-float" id="walletBoxes" aria-hidden="true">
+        <div class="blessing-bubble sb" style="background:none;box-shadow:none;width:70px;height:70px;padding:0;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;">
+          <!-- Piggy Bank Tooltip -->
+          <div id="pb-tooltip" class="wallet-tooltip" style="display:none;">
+            <span class="tooltip-name">Piggy Bank:</span>
+            <span class="tooltip-description">Your stored amount</span>
+          </div>
+          <svg viewBox="0 0 70 70" width="70" height="70" style="display:block;position:relative;">
+            <!-- Piggy bank body with gradient -->
+            <defs>
+              <radialGradient id="pigBodyGrad" cx="50%" cy="50%" r="60%">
+                <stop offset="0%" stop-color="#ffe066" stop-opacity="0.8"/>
+                <stop offset="60%" stop-color="#ffd700" stop-opacity="0.9"/>
+                <stop offset="100%" stop-color="#b8860b" stop-opacity="1"/>
+              </radialGradient>
+              <linearGradient id="pigLegGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#b8860b"/>
+                <stop offset="100%" stop-color="#8b6914"/>
+              </linearGradient>
+            </defs>
+            <ellipse cx="35" cy="40" rx="28" ry="20" fill="url(#pigBodyGrad)" stroke="#3d2817" stroke-width="2" />
+            <!-- Piggy bank ear (improved shape) -->
+            <ellipse cx="18" cy="22" rx="5" ry="7" fill="url(#pigBodyGrad)" stroke="#3d2817" stroke-width="1.5" />
+            <!-- Piggy bank tail (curly, festive) -->
+            <path d="M62 40 Q68 38 62 36 Q68 34 62 32 Q66 30 62 28" stroke="#fffbe6" stroke-width="2.2" fill="none" />
+            <!-- Piggy bank nose with nostrils -->
+            <ellipse cx="54" cy="48" rx="5" ry="4" fill="url(#pigBodyGrad)" stroke="#fffbe6" stroke-width="1.5" />
+            <circle cx="52.5" cy="48" r="0.7" fill="#fffbe6" />
+            <circle cx="55.5" cy="48" r="0.7" fill="#fffbe6" />
+            <!-- Piggy bank eye with highlight -->
+            <circle cx="50" cy="36" r="2.2" fill="#fffbe6" stroke="#ffc200" stroke-width="0.7" />
+            <circle cx="50.7" cy="35.5" r="0.7" fill="#ffc200" />
+            <!-- Piggy bank legs -->
+            <rect x="18" y="58" width="6" height="7" rx="2" fill="url(#pigLegGrad)" />
+            <rect x="46" y="58" width="6" height="7" rx="2" fill="url(#pigLegGrad)" />
+            <!-- Festive sparkle highlight -->
+            <ellipse cx="40" cy="32" rx="6" ry="2.5" fill="#fffbe6" opacity="0.5" />
+          </svg>
+          <span class="label" style="position:absolute;top:24px;left:0;width:100%;text-align:center;font-weight:700;color:#060606;font-size:0.8em;line-height:1.1;text-shadow:0 0px 2px #fcc200, 0 0 1px #fcc200;letter-spacing:0.04em;font-family:'Montserrat','Poppins',sans-serif;">PB</span>
+          <span class="value" id="sb" style="position:absolute;top:39px;left:0;width:100%;text-align:center;font-weight:700;color:#060606;font-size:1em;line-height:1.1;text-shadow:0 0px 2px #fcc200, 0 0 4px #fcc20055;letter-spacing:0.03em;font-family:'Montserrat','Poppins',sans-serif;">$0</span>
+          <!-- Example Amounts Tooltip (appears above Piggy Bank) -->
+          <div id="example-amounts-tooltip" class="example-amounts-tooltip" style="display:none;">
+            <div class="example-line">Exemplary</div>
+            <div class="example-line">Amounts</div>
+          </div>
+          <!-- Your Turn Tooltip (appears above Piggy Bank after 15 seconds) -->
+          <div id="your-turn-tooltip" class="your-turn-tooltip" style="display:none;">
+            <div class="turn-line">Your turn !</div>
+            <div class="turn-line"></div>
+          </div>
+        </div>
+        <div class="blessing-bubble wb" style="position:relative;">
+          <!-- Winning Bonus Tooltip -->
+          <div id="wb-tooltip" class="wallet-tooltip" style="display:none;">
+            <span class="tooltip-name">Winning Bonus:</span>
+            <span class="tooltip-description">Your spiritual bonus %</span>
+          </div>
+          <span class="label">WB</span>
+          <span class="value" id="wb">$0</span>
+        </div>
+        <div class="blessing-bubble tb" style="position:relative;">
+          <!-- Total Blessing Tooltip -->
+          <div id="tb-tooltip" class="wallet-tooltip" style="display:none;">
+            <span class="tooltip-name">Total Blessing:</span>
+            <span class="tooltip-description">Total withdrawable amount</span>
+          </div>
+          <span class="label">TB</span>
+          <span class="value" id="tb">$0</span>
+        </div>
+      </div>
+
+  <header style="margin-bottom:0; padding-bottom:0;background-image: url('phase-1-media/header12.webp');z-index: 999;">
+        <div class="brand" style="margin-bottom:0.1em;background-image: url('phase-1-media/header12.webp');z-index: 999;text-box:#e0e;">
+          <img id="main-logo" src="phase-1-media/logo1.gif" alt="Logo" class="logo santa-logo" style="width:48px;height:48px;border-radius:8px;object-fit:contain;box-shadow:var(--glow);background:#000000;margin-left:0;" />
+                    <!-- Active Users Status Box -->
+                    <div id="active-users-status">
+                      <div class="active-status">
+                        <span class="pulse-dot"></span>
+                        <span class="active-label">Active</span>
+                      </div>
+                      <div class="user-count" id="user-count">42 users</div>
+                    </div>
+          <div style="position:relative;display:inline-block;">
+              <h1 class="title" style="position:relative;z-index:1;background: linear-gradient(90deg, #cb0808 0%, #e0e0e0 60%, #bfc1c2 80%, #fff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 900; text-shadow: 0 2px 12px #fff8, 0 1px 6px #bfc1c244;font-size:1.3em;margin:0.1em 0 0.05em 0;background-color: #000000;">Blessing Journey</h1>
+          </div>
+        </div>
+          <!-- Theme button removed -->
+        <!-- Scores Banner (sticky/floating) -->
+  <div class="blessing-banner" style="margin-bottom:0;">
+  <div class="blessing-side fate">
+    <span class="label">Fate</span>
+    <span class="value" id="fs">45</span>
+  </div>
+  <div class="blessing-main" id="blessingMain">
+    <span class="label">Blessing Card</span>
+    <span class="card-type" id="tierTxt">Red Card</span>
+    <div class="small-stats" style="margin-top:6px;display:flex;gap:12px;align-items:center;">
+  <span class="bp-stat-box">BP: <strong id="bp">0%</strong></span>
+
+    </div>
+  </div>
+  <div class="blessing-side risk">
+    <span class="label">Faith</span>
+    <span class="value" id="rs">20</span>
+  </div>
+</div>
+<!-- Empty strip for spacing -->
+<div id="metrics-banner" style="height:0.75cm;width:103%;background:linear-gradient(90deg,#0f0763 0%,#000000 100%);box-shadow:0 2px 4px #5f9ae744,0 0 4px #3700ff66; border-radius:0.1cm; margin:0.1cm 0 0.18cm 0; display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative;">
+  <div class="metrics-slide metrics-setA">
+    <span id="metrics-today" style="font: size 0.9em;letter-spacing:0px;margin-right:10px;">Today’s Blessings:$12,714,</span>
+    <span id="metrics-bigwins" style="font-size:0.75em;letter-spacing:0px;margin-right:10px;">
+      <img src="phase-1-media/star.gif" alt="Star" style="width:1em;height:2em;vertical-align:middle;object-fit:contain;" loop>
+      Wins (LHr): <span id="wins-last-hr"></span>
+    </span>
+  </div>
+  <div class="metrics-slide metrics-setB">
+    <span id="metrics-spins" style="font: size 1em;letter-spacing:0.2px;margin-left:0px;">
+      <img src="phase-1-media/wheel12.gif" alt="Wheel" style="width:1em;height:1em;vertical-align:middle;object-fit:contain;display:inline;" /> Spins: 754 / 1000
+    </span>
+    <span style="margin:0 1em;"></span>
+    <span id="metrics-spinsleft" style="font-size:0.9em;letter-spacing:0.2px;margin-left:0%;">
+      <img src="phase-1-media/eyes12.gif" alt="Eyes" style="width:1.3em;height:1.5em;vertical-align:middle;object-fit:contain;display:inline;" /> 246 Spins Left
+    </span>
+  </div>
+</div>
+<!-- Live Comment Ticker (restored) -->
+<div id="live-comment-ticker"><positioning:left></positioning:left></div>
+      </header>
+<style>
+  #metrics-banner {
+    font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
+    font-size: 0.92em;
+    user-select: none;
+  }
+  .metrics-slide {
+    position: absolute;
+    left: 0; right: 0; top: 0; bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 1.5s, transform 1.5s;
+    will-change: opacity, transform;
+    pointer-events: none;
+  }
+  .metrics-slide.show {
+    opacity: 1 !important;
+    transform: translateX(0);
+    pointer-events: auto;
+  }
+  .metrics-slide.hide {
+    opacity: 0 !important;
+    transform: translateX(-40px);
+    pointer-events: none;
+  }
+  .metrics-animate {
+    animation: metricsPulse 0.7s;
+  }
+  @keyframes metricsPulse {
+    0% { filter: brightness(1.2) drop-shadow(0 0 8px #ffe066); }
+    50% { filter: brightness(2.2) drop-shadow(0 0 16px #ffd700); }
+    100% { filter: brightness(1.2) drop-shadow(0 0 8px #ffe066); }
+  }
+</style>
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Only show metrics banner in Phase 1
+  function updateBannerVisibility() {
+    var p1 = document.getElementById('p1');
+    var banner = document.getElementById('metrics-banner');
+    if (!banner) return;
+    if (p1 && p1.classList.contains('active')) {
+      banner.style.display = 'flex';
+    } else {
+      banner.style.display = 'none';
+    }
+  }
+  updateBannerVisibility();
+  var phaseEls = document.querySelectorAll('.screen');
+  phaseEls.forEach(function(el) {
+    var obs = new MutationObserver(updateBannerVisibility);
+    obs.observe(el, { attributes: true });
+  });
+
+  // Metrics Banner Logic
+  const metricsBanner = document.getElementById('metrics-banner');
+  if (!metricsBanner) return;
+  const setA = metricsBanner.querySelector('.metrics-setA');
+  const setB = metricsBanner.querySelector('.metrics-setB');
+  const elToday = document.getElementById('metrics-today');
+  const elBigWins = document.getElementById('wins-last-hr');
+  const elSpins = document.getElementById('metrics-spins');
+  const elSpinsLeft = document.getElementById('metrics-spinsleft');
+
+  // Infinite, live metrics
+  let metrics = {
+    totalEarned: Math.floor(Math.random() * (7000 - 3000 + 1)) + 3000,
+    spins: Math.floor(Math.random() * (850 - 650 + 1)) + 650,
+    spinsTarget: 1000,
+    bigWins: Math.floor(Math.random() * (150 - 80 + 1)) + 80,
+    lastUpdated: Date.now()
+  };
+
+  // Animate number change
+  function animateNumber(el, start, end, prefix = '', suffix = '', duration = 700) {
+    if (start === end) {
+      el.textContent = prefix + end.toLocaleString() + suffix;
+      return;
+    }
+    let frame = 0;
+    const steps = Math.max(10, Math.floor(duration / 40));
+    const increment = (end - start) / steps;
+    function stepAnim() {
+      frame++;
+      const value = Math.round(start + increment * frame);
+      el.textContent = prefix + value.toLocaleString() + suffix;
+      if (frame < steps) {
+        setTimeout(stepAnim, duration / steps);
+      } else {
+        el.textContent = prefix + end.toLocaleString() + suffix;
+      }
+    }
+    stepAnim();
+  }
+
+  function animateStyledNumber(el, start, end, style, prefix = '', suffix = '', duration = 600) {
+    if (start === end) {
+      el.innerHTML = prefix + '<span style="' + style + '">' + end.toLocaleString() + '</span>' + suffix;
+      return;
+    }
+    let frame = 0;
+    const steps = Math.max(10, Math.floor(duration / 30));
+    const increment = (end - start) / steps;
+    function stepAnim() {
+      frame++;
+      const value = Math.round(start + increment * frame);
+      el.innerHTML = prefix + '<span style="' + style + '">' + value.toLocaleString() + '</span>' + suffix;
+      if (frame < steps) {
+        setTimeout(stepAnim, duration / steps);
+      } else {
+        el.innerHTML = prefix + '<span style="' + style + '">' + end.toLocaleString() + '</span>' + suffix;
+      }
+    }
+    stepAnim();
+  }
+
+  function updateBanner(prev = {}) {
+    // Blessings (gold, count up)
+    elToday.innerHTML = '<img src="phase-1-media/moneyflying.gif" alt="Money Flying" style="width:3em;height:3.5em;vertical-align:middle;object-fit:contain;display:inline;margin-right:0%;" />Today’s Blessings: $<span id="bless-amt"></span>';
+    animateStyledNumber(
+      document.getElementById('bless-amt'),
+      prev.totalEarned ?? metrics.totalEarned,
+      metrics.totalEarned,
+      'color:#fcc200;font-weight:bold;',
+      '',
+      '',
+      600
+    );
+    elBigWins.textContent = metrics.bigWins;
+    // Spins (green count up, target red, slash yellow)
+    elSpins.innerHTML = '<img src="phase-1-media/wheel12.gif" alt="Wheel" style="width:2em;height:2em;vertical-align:middle;object-fit:contain;display:inline;" /> Spins: <span id="spins-cur"></span> <span style="color:#FFD700;font-weight:bold;">/</span> <span style="color:#ef4444;font-weight:bold;">' + metrics.spinsTarget + '</span>';
+    animateStyledNumber(
+      document.getElementById('spins-cur'),
+      prev.spins ?? metrics.spins,
+      metrics.spins,
+      'color:#22c55e;font-weight:bold;',
+      '',
+      '',
+      600
+    );
+    // Spins left (red, count down)
+    elSpinsLeft.innerHTML = '<img src="phase-1-media/eyes12.gif" alt="Eyes" style="width:3em;height:3em;vertical-align:middle;object-fit:contain;display:inline;" /> <span id="spins-left"></span> Spins Left';
+    animateStyledNumber(
+      document.getElementById('spins-left'),
+      prev.spinsLeft ?? (metrics.spinsTarget - metrics.spins),
+      metrics.spinsTarget - metrics.spins,
+      'color:#ef4444;font-weight:bold;',
+      '',
+      '',
+      600
+    );
+  }
+
+  function rotateBanner() {
+    if (setA.classList.contains('show')) {
+      setA.classList.remove('show');
+      setA.classList.add('hide');
+      setB.classList.remove('hide');
+      setB.classList.add('show');
+    } else {
+      setB.classList.remove('show');
+      setB.classList.add('hide');
+      setA.classList.remove('hide');
+      setA.classList.add('show');
+    }
+  }
+
+  let updateTimer = null, rotateTimer = null;
+  function liveUpdate() {
+    if (document.hidden) return;
+    // Save previous values for animation
+    const prev = { ...metrics, spinsLeft: metrics.spinsTarget - metrics.spins };
+    // Spins increment: +3, +5, +10
+    const spinsIncArr = [3, 5, 10];
+    const spinsInc = spinsIncArr[Math.floor(Math.random() * spinsIncArr.length)];
+    metrics.spins += spinsInc;
+    // Target stays fixed at 1000
+    metrics.spinsTarget = 1000;
+    // Money increment: 70% chance: less than $100, 30% chance: $100 to $150
+    let moneyInc;
+    if (Math.random() < 0.7) {
+      // 70% chance: less than $100 (range: $10 to $99)
+      moneyInc = Math.floor(Math.random() * (99 - 10 + 1)) + 10;
+    } else {
+      // 30% chance: $100 to $150
+      moneyInc = Math.floor(Math.random() * (150 - 100 + 1)) + 100;
+    }
+    metrics.totalEarned += moneyInc;
+    // Big wins: random chance
+    if (Math.random() < 0.12) metrics.bigWins += 1;
+    updateBanner(prev);
+  }
+
+  function startLiveUpdate() {
+    if (updateTimer) clearTimeout(updateTimer);
+    function loop() {
+      liveUpdate();
+      // 5 pop-ups per minute (30% decrease from 7) = ~12000ms per update (60000 / 5)
+      // Using 11000-13000ms range to average to 5 per minute
+      updateTimer = setTimeout(loop, Math.floor(Math.random() * (13000 - 11000 + 1)) + 11000);
+    }
+    loop();
+  }
+
+  function startRotate() {
+    if (rotateTimer) clearTimeout(rotateTimer);
+    function loop() {
+      rotateBanner();
+      rotateTimer = setTimeout(loop, 4500);
+    }
+    loop();
+  }
+
+  setA.classList.add('show');
+  setB.classList.add('hide');
+  updateBanner();
+  startLiveUpdate();
+  startRotate();
+
+  // Expose API
+  window.metrics = {
+    addWin: function(winAmount) {
+      const prev = { ...metrics, spinsLeft: metrics.spinsTarget - metrics.spins };
+      metrics.totalEarned += winAmount;
+      metrics.spins += 1;
+      metrics.spinsTarget = 1000;
+      if (winAmount >= 70 && winAmount <= 150) metrics.bigWins += 1;
+      updateBanner(prev);
+    },
+    pause: function() { if (updateTimer) clearTimeout(updateTimer); },
+    resume: startLiveUpdate
+  };
+});
+</script>
+        <!-- Journey Bar (rendered later into shared controller) -->
+      </header>
+
+      <!-- Remove extra margin/padding below header -->
+      <style>
+        header {
+          margin-bottom: 0 !important;
+          padding-bottom: 0 !important;
+        }
+        .app {
+          margin-bottom: 0 !important;
+        }
+        main {
+          margin-top: 0 !important;
+        }
+      </style>
+
+  <main style="margin-top: -70px;">
+        <!-- Phase 1: Spin for BP & PWYW into SB -->
+        <section id="p1" class="screen active">
+          <style>
+            /* Only Phase 1: lift continue button, phase bar, snowsurface upward */
+            #p1 ~ .controller-wrapper {
+              margin-top: 0.8em !important;
+            }
+            #p1 ~ #bottom-space {
+              margin-top: 0.05in !important;
+            }
+            #p1 .wheel-section-bg {
+              margin-bottom: -4.0cm !important;
+            }
+            #p1 .card {
+              border-radius: 15px !important;
+            }
+          </style>
+          <div class="card" style="margin-bottom: 0.5px; position: relative; background: url('phase-1-media/dcbg.gif') center center/cover no-repeat; z-index: 1; margin-top: -2cm;">
+            <div style="position:relative;display:inline-block;">
+                <div style="display:flex;align-items:center;justify-content:center;gap:0.5em;">
+                  <!-- Left bulb video -->
+                  <video autoplay muted loop playsinline class="gateway-bulb-img" style="width:28px;height:28px;margin-right:0.3em;filter:drop-shadow(0 0 12px #ffe06688);opacity:0.55;">
+                    <source src="phase-1-media/bulb1.mp4" type="video/mp4">
+                  </video>
+                  <strong class="blessing-gateway-heading">Phase 1 — The Blessing Gateway</strong>
+                  <!-- Right bulb video -->
+                  <video autoplay muted loop playsinline class="gateway-bulb-img" style="width:28px;height:28px;margin-left:0.3em;filter:drop-shadow(0 0 12px #ffe06688);opacity:0.55;">
+                    <source src="phase-1-media/bulb1.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <style>
+                </style>
+                <style>
+                  .blessing-gateway-heading {
+                    display: block;
+                    text-align: center;
+                    font-family: 'Cinzel Decorative', 'Playfair Display SC', serif;
+                    font-size: 1rem;
+                    font-weight: 900;
+                    letter-spacing: 0.04em;
+                    background: linear-gradient(90deg, #FFD700 0%, #FFF8DC 100%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                    color: transparent;
+                    text-shadow:
+                      0 0 12px #fff,
+                      0 2px 18px #FFD70088,
+                      0 1px 8px #FFF8DC88;
+                    filter: drop-shadow(0 0 8px #fff8) drop-shadow(0 0 6px #FFD70088);
+                    margin: 0.5em auto 0.3em auto;
+                    border-radius: 12px;
+                    opacity: 0;
+                    animation: blessing-fadein 2.2s ease forwards, blessing-shimmer 4.5s linear infinite;
+                    position: relative;
+                    overflow: visible;
+                  }
+                  @keyframes blessing-fadein {
+                    0% { opacity: 0; filter: blur(8px) brightness(1.2); }
+                    80% { opacity: 1; filter: blur(0.5px) brightness(1.1); }
+                    100% { opacity: 1; filter: blur(0px) brightness(1); }
+                  }
+                  @keyframes blessing-shimmer {
+                    0% { background-position: -120% 0; }
+                    100% { background-position: 120% 0; }
+                  }
+                  .blessing-gateway-heading::after {
+                    content: '';
+                    position: absolute;
+                    left: 0; top: 0; width: 100%; height: 100%;
+                    pointer-events: none;
+                    background: linear-gradient(100deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.33) 50%, rgba(255,255,255,0.18) 100%);
+                    mix-blend-mode: lighten;
+                    border-radius: 12px;
+                    animation: blessing-shimmer 4.5s linear infinite;
+                    z-index: 2;
+                  }
+                </style>
+            </div>
+            <div class="hint">
+              Tap Spin to reveal your Blessing % — free, instant, and changes your journey.
+            </div>
+          </div>
+          <div class="wheel-section-bg" style="position:relative; width:100%; min-height:320px; display:flex; flex-direction:column; justify-content:center; align-items:center; border-radius:12px; box-shadow: 0 3px 4px rgba(243, 255, 6, 0.1), 0 1.5px 6px rgba(0,0,0,0.18); overflow:hidden; z-index:10;">
+            <div id="bpWinFloat" style="display:none;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:linear-gradient(90deg,#111827,#0b1220);color:#fff;padding:8px 12px;border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,0.6);font-weight:800;z-index:1200;font-size:1.2em;pointer-events:none;transition:opacity 0.4s, left 0.8s, top 0.8s;">
+              </div>
+            <video autoplay loop muted playsinline>
+              <source src="phase-1-media/whbg1.mp4" type="video/mp4">
+            </video>
+            <div class="wheel-wrap" style="margin-top:-244px; width:100%; padding-left:0;">
+            <!-- C1: Spin button and wheel -->
+            <div id="c1-container" class="wheel-wrap" style="margin-top:-20px; margin-bottom:-1.92cm; transition:opacity 0.5s; width:100%; padding-left:9; margin-left:0;">
+        <div class="pointer" aria-hidden="true" id="rimPointer"
+          style="margin-top: 185px; margin-left: -192px; transform: rotate(180deg); width: 56px; height: 35px; background: linear-gradient(120deg,#b8860b  0%,#daa520   60%,#bfae5e 100%); clip-path: polygon(0 50%, 100% 0, 90% 50%, 100% 100%); box-shadow: 0 0 24px 8px #ffd36e88, 0 2px 12px #fffbe6cc, 0 0 0 2px #fff; border: 2px solid #fffbe6; border-radius: 8px 24px 24px 8px / 50% 50% 50% 50%; display: block;"></div>
+                <svg
+                  id="bpWheel"
+                  class="wheel"
+                  viewBox="0 0 100 100"
+                  aria-hidden="true"
+                  style="margin-left:-0.7cm;"
+                ></svg>
+                <button id="spinBp" class="cta" style="background: linear-gradient(120deg, #b8860b 0%, #ffe066 80%, #fffbe6 100%) !important; color: #060606 !important; text-shadow: 0 0 2px #fcc200, 0 0 1px #fcc200, 1px 0 0 #fcc200, -1px 0 0 #fcc200, 0 1px 0 #fcc200, 0 -1px 0 #fcc200 !important; border-radius: 18px !important; box-shadow: 0 0 5px 2px #01010155, 0 1px 5px #06060644 !important; font-weight: 900 !important;">Spin</button>
+            </div>
+            <!-- C2: Add-to-your-Wallet & Add to SB, hidden initially -->
+            <div id="c2-container" class="row" style="margin-top:0.001cm; margin-bottom:0.5cm; gap:50px; justify-content:center; align-items:center; z-index:2; opacity:0; pointer-events:none; transition:opacity 0.5s; width:100%; display: none; position: relative;">
+              <img
+                id="ebook-cover"
+                src="phase-1-media/cover-ebook1.webp"
+                alt="Ebook Cover"
+                style="width:210px; height:220px; object-fit:cover; border-radius:12px; display:block; margin-top:5cm;margin-left: 9px; position:relative; z-index:10;"
+              />
+              <div class="gradient-l-border-wrap" style="min-width:160px; max-width:180px; margin-top:1.5cm;">
+                <input
+                  id="pwyw"
+                  type="number"
+                  min="0"
+                  max="100"
+                  step="1"
+                  placeholder="Add-to-your-Wallet (Max 100$)"
+                  style="width:100%; height:38px; font-size:1rem; border-radius:10px; background: linear-gradient(135deg, #0f1526 0%, #1a2350 100%); color:#eaf0ff; border:2px solid rgba(121, 166, 255, 0.25); box-shadow: 0 0 12px rgba(121, 166, 255, 0.15), inset 0 0 8px rgba(121, 166, 255, 0.08); padding:0 12px; transition: all 0.3s ease; font-weight: 500; letter-spacing: 0.02em;"
+                />
+              </div>
+              <button id="addSB" class="cta secondary" style="min-width:90px; height:38px; font-size:1rem; border-radius:10px; background: #0a0f1b; margin-top:-1.1cm; box-shadow: 0 0 6px 2px #4169e1aa, 0 0 2px 1px #ffd700aa; color: #ffd700; font-weight: 700; border: 2.5px solid transparent; background-image: linear-gradient(#0a0f1b, #0a0f1b), linear-gradient(135deg, #4169e1 0%, #ffd700 50%, #4169e1 100%); background-origin: border-box; background-clip: padding-box, border-box; display:none; align-items:center; justify-content:center; margin-left:-38px; letter-spacing:0.05em;">
+                Add to PB
+              </button>
+            </div>
+
+            <!-- Amount Suggestion Boxes -->
+            <div id="amount-suggestions-container" style="display: grid; grid-template-columns: repeat(4, 1fr); column-gap: 0px; row-gap: 2px; justify-items: stretch; align-items: center; margin-top: -0.45cm; margin-bottom: 0.8cm;margin-right: 10px; width: 80%; overflow: visible; opacity: 0; pointer-events: none; transition: opacity 0.5s; padding: 0px; box-sizing: border-box;"></div>
+            <style>
+              /* Hide extra investment input and button in Phase 2 */
+              .phase2-active #extraInvest,
+              .phase2-active #addInvest {
+                display: none !important;
+              }
+              
+              /* $1 PayHip Modal Styles */
+              #payhip-modal-overlay-1 {
+                display: none !important;
+                position: absolute !important;
+                top: 0 !important;
+                left: 0 !important;
+                width: 100% !important;
+                height: 100% !important;
+                background: rgba(0, 0, 0, 0.85) !important;
+                z-index: 2147483647 !important;
+                justify-content: center !important;
+                align-items: center !important;
+                overflow-y: auto !important;
+                overflow-x: hidden !important;
+                padding: 20px !important;
+                scrollbar-width: none !important;
+                -ms-overflow-style: none !important;
+              }
+              
+              #payhip-modal-overlay-1::-webkit-scrollbar {
+                width: 0 !important;
+                height: 0 !important;
+              }
+              
+              #payhip-modal-overlay-1.show {
+                display: flex !important;
+              }
+              
+              #payhip-modal-content-1 {
+                position: relative !important;
+                background: #0a0f1b !important;
+                border-radius: 10px !important;
+                max-width: 700px !important;
+                width: 100% !important;
+                max-height: 90vh !important;
+                overflow-y: auto !important;
+                margin: auto !important;
+                box-shadow: 0 0 40px rgba(0, 0, 0, 0.95) !important;
+                z-index: 2147483646 !important;
+                scrollbar-width: none !important;
+                -ms-overflow-style: none !important;
+              }
+              
+              #payhip-modal-content-1::-webkit-scrollbar {
+                width: 0 !important;
+                height: 0 !important;
+              }
+              
+              #close-payhip-modal-1 {
+                position: absolute !important;
+                top: 10px !important;
+                right: 10px !important;
+                background: #ff6b81 !important;
+                color: white !important;
+                border: none !important;
+                border-radius: 50% !important;
+                width: 40px !important;
+                height: 40px !important;
+                font-size: 24px !important;
+                cursor: pointer !important;
+                z-index: 2147483645 !important;
+                font-weight: bold !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                padding: 0 !important;
+              }
+              
+              #payhip-iframe-1 {
+                width: 100% !important;
+                height: 100% !important;
+                border: none !important;
+                display: block !important;
+                position: relative !important;
+                z-index: 2147483644 !important;
+                overflow: hidden !important;
+                scrollbar-width: none !important;
+                -ms-overflow-style: none !important;
+              }
+              
+              #payhip-iframe-1::-webkit-scrollbar {
+                width: 0 !important;
+                height: 0 !important;
+              }
+              
+              #payhip-modal-overlay {
+                display: none !important;
+                position: absolute !important;
+                top: 0 !important;
+                left: 0 !important;
+                width: 100% !important;
+                height: 100% !important;
+                background: rgba(0, 0, 0, 0.85) !important;
+                z-index: 2147483647 !important;
+                justify-content: center !important;
+                align-items: center !important;
+                overflow-y: auto !important;
+                overflow-x: hidden !important;
+                padding: 20px !important;
+                scrollbar-width: none !important;
+                -ms-overflow-style: none !important;
+              }
+              
+              #payhip-modal-overlay::-webkit-scrollbar {
+                width: 0 !important;
+                height: 0 !important;
+              }
+              
+              #payhip-modal-overlay.show {
+                display: flex !important;
+              }
+              
+              #payhip-modal-content {
+                position: relative !important;
+                background: #0a0f1b !important;
+                border-radius: 10px !important;
+                max-width: 700px !important;
+                width: 100% !important;
+                max-height: 90vh !important;
+                overflow-y: auto !important;
+                margin: auto !important;
+                box-shadow: 0 0 40px rgba(0, 0, 0, 0.95) !important;
+                z-index: 2147483646 !important;
+                scrollbar-width: none !important;
+                -ms-overflow-style: none !important;
+              }
+              
+              #payhip-modal-content::-webkit-scrollbar {
+                width: 0 !important;
+                height: 0 !important;
+              }
+              
+              #close-payhip-modal {
+                position: absolute !important;
+                top: 10px !important;
+                right: 10px !important;
+                background: #ff6b81 !important;
+                color: white !important;
+                border: none !important;
+                border-radius: 50% !important;
+                width: 40px !important;
+                height: 40px !important;
+                font-size: 24px !important;
+                cursor: pointer !important;
+                z-index: 2147483645 !important;
+                font-weight: bold !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                padding: 0 !important;
+              }
+              
+              #payhip-iframe {
+                width: 100% !important;
+                height: 100% !important;
+                border: none !important;
+                display: block !important;
+                position: relative !important;
+                z-index: 2147483644 !important;
+                overflow: hidden !important;
+                scrollbar-width: none !important;
+                -ms-overflow-style: none !important;
+              }
+              
+              #payhip-iframe::-webkit-scrollbar {
+                width: 0 !important;
+                height: 0 !important;
+              }
+              
+              /* $3 PayHip Modal Styles */
+              #payhip-modal-overlay-3 {
+                display: none !important;
+                position: absolute !important;
+                top: 0 !important;
+                left: 0 !important;
+                width: 100% !important;
+                height: 100% !important;
+                background: rgba(0, 0, 0, 0.85) !important;
+                z-index: 2147483647 !important;
+                justify-content: center !important;
+                align-items: center !important;
+                overflow-y: auto !important;
+                overflow-x: hidden !important;
+                padding: 20px !important;
+                scrollbar-width: none !important;
+                -ms-overflow-style: none !important;
+              }
+              
+              #payhip-modal-overlay-3::-webkit-scrollbar {
+                width: 0 !important;
+                height: 0 !important;
+              }
+              
+              #payhip-modal-overlay-3.show {
+                display: flex !important;
+              }
+              
+              #payhip-modal-content-3 {
+                position: relative !important;
+                background: #0a0f1b !important;
+                border-radius: 10px !important;
+                max-width: 700px !important;
+                width: 100% !important;
+                max-height: 90vh !important;
+                overflow-y: auto !important;
+                margin: auto !important;
+                box-shadow: 0 0 40px rgba(0, 0, 0, 0.95) !important;
+                z-index: 2147483646 !important;
+                scrollbar-width: none !important;
+                -ms-overflow-style: none !important;
+              }
+              
+              #payhip-modal-content-3::-webkit-scrollbar {
+                width: 0 !important;
+                height: 0 !important;
+              }
+              
+              #close-payhip-modal-3 {
+                position: absolute !important;
+                top: 10px !important;
+                right: 10px !important;
+                background: #ff6b81 !important;
+                color: white !important;
+                border: none !important;
+                border-radius: 50% !important;
+                width: 40px !important;
+                height: 40px !important;
+                font-size: 24px !important;
+                cursor: pointer !important;
+                z-index: 2147483645 !important;
+                font-weight: bold !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                padding: 0 !important;
+              }
+              
+              #payhip-iframe-3 {
+                width: 100% !important;
+                height: 100% !important;
+                border: none !important;
+                display: block !important;
+                position: relative !important;
+                z-index: 2147483644 !important;
+                overflow: hidden !important;
+                scrollbar-width: none !important;
+                -ms-overflow-style: none !important;
+              }
+              
+              #payhip-iframe-3::-webkit-scrollbar {
+                width: 0 !important;
+                height: 0 !important;
+              }
+              
+              /* $10 PayHip Modal Styles */
+              #payhip-modal-overlay-10 {
+                display: none !important;
+                position: absolute !important;
+                top: 0 !important;
+                left: 0 !important;
+                width: 100% !important;
+                height: 100% !important;
+                background: rgba(0, 0, 0, 0.85) !important;
+                z-index: 2147483647 !important;
+                justify-content: center !important;
+                align-items: center !important;
+                overflow-y: auto !important;
+                overflow-x: hidden !important;
+                padding: 20px !important;
+                scrollbar-width: none !important;
+                -ms-overflow-style: none !important;
+              }
+              
+              #payhip-modal-overlay-10::-webkit-scrollbar {
+                width: 0 !important;
+                height: 0 !important;
+              }
+              
+              #payhip-modal-overlay-10.show {
+                display: flex !important;
+              }
+              
+              #payhip-modal-content-10 {
+                position: relative !important;
+                background: #0a0f1b !important;
+                border-radius: 10px !important;
+                max-width: 700px !important;
+                width: 100% !important;
+                max-height: 90vh !important;
+                overflow-y: auto !important;
+                margin: auto !important;
+                box-shadow: 0 0 40px rgba(0, 0, 0, 0.95) !important;
+                z-index: 2147483646 !important;
+                scrollbar-width: none !important;
+                -ms-overflow-style: none !important;
+              }
+              
+              #payhip-modal-content-10::-webkit-scrollbar {
+                width: 0 !important;
+                height: 0 !important;
+              }
+              
+              #close-payhip-modal-10 {
+                position: absolute !important;
+                top: 10px !important;
+                right: 10px !important;
+                background: #ff6b81 !important;
+                color: white !important;
+                border: none !important;
+                border-radius: 50% !important;
+                width: 40px !important;
+                height: 40px !important;
+                font-size: 24px !important;
+                cursor: pointer !important;
+                z-index: 2147483645 !important;
+                font-weight: bold !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                padding: 0 !important;
+              }
+              
+              #payhip-iframe-10 {
+                width: 100% !important;
+                height: 100% !important;
+                border: none !important;
+                display: block !important;
+                position: relative !important;
+                z-index: 2147483644 !important;
+                overflow: hidden !important;
+                scrollbar-width: none !important;
+                -ms-overflow-style: none !important;
+              }
+              
+              #payhip-iframe-10::-webkit-scrollbar {
+                width: 0 !important;
+                height: 0 !important;
+              }
+              
+              /* $20 PayHip Modal Styles */
+              #payhip-modal-overlay-20 {
+                display: none !important;
+                position: absolute !important;
+                top: 0 !important;
+                left: 0 !important;
+                width: 100% !important;
+                height: 100% !important;
+                background: rgba(0, 0, 0, 0.85) !important;
+                z-index: 2147483647 !important;
+                justify-content: center !important;
+                align-items: center !important;
+                overflow-y: auto !important;
+                overflow-x: hidden !important;
+                padding: 20px !important;
+                scrollbar-width: none !important;
+                -ms-overflow-style: none !important;
+              }
+              
+              #payhip-modal-overlay-20::-webkit-scrollbar {
+                width: 0 !important;
+                height: 0 !important;
+              }
+              
+              #payhip-modal-overlay-20.show {
+                display: flex !important;
+              }
+              
+              #payhip-modal-content-20 {
+                position: relative !important;
+                background: #0a0f1b !important;
+                border-radius: 10px !important;
+                max-width: 700px !important;
+                width: 100% !important;
+                max-height: 90vh !important;
+                overflow-y: auto !important;
+                margin: auto !important;
+                box-shadow: 0 0 40px rgba(0, 0, 0, 0.95) !important;
+                z-index: 2147483646 !important;
+                scrollbar-width: none !important;
+                -ms-overflow-style: none !important;
+              }
+              
+              #payhip-modal-content-20::-webkit-scrollbar {
+                width: 0 !important;
+                height: 0 !important;
+              }
+              
+              #close-payhip-modal-20 {
+                position: absolute !important;
+                top: 10px !important;
+                right: 10px !important;
+                background: #ff6b81 !important;
+                color: white !important;
+                border: none !important;
+                border-radius: 50% !important;
+                width: 40px !important;
+                height: 40px !important;
+                font-size: 24px !important;
+                cursor: pointer !important;
+                z-index: 2147483645 !important;
+                font-weight: bold !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                padding: 0 !important;
+              }
+              
+              #payhip-iframe-20 {
+                width: 100% !important;
+                height: 100% !important;
+                border: none !important;
+                display: block !important;
+                position: relative !important;
+                z-index: 2147483644 !important;
+                overflow: hidden !important;
+                scrollbar-width: none !important;
+                -ms-overflow-style: none !important;
+              }
+              
+              #payhip-iframe-20::-webkit-scrollbar {
+                width: 0 !important;
+                height: 0 !important;
+              }
+              
+              /* $50 PayHip Modal Styles */
+              #payhip-modal-overlay-50 {
+                display: none !important;
+                position: absolute !important;
+                top: 0 !important;
+                left: 0 !important;
+                width: 100% !important;
+                height: 100% !important;
+                background: rgba(0, 0, 0, 0.85) !important;
+                z-index: 2147483647 !important;
+                justify-content: center !important;
+                align-items: center !important;
+                overflow-y: auto !important;
+                overflow-x: hidden !important;
+                padding: 20px !important;
+                scrollbar-width: none !important;
+                -ms-overflow-style: none !important;
+              }
+              
+              #payhip-modal-overlay-50::-webkit-scrollbar {
+                width: 0 !important;
+                height: 0 !important;
+              }
+              
+              #payhip-modal-overlay-50.show {
+                display: flex !important;
+              }
+              
+              #payhip-modal-content-50 {
+                position: relative !important;
+                background: #0a0f1b !important;
+                border-radius: 10px !important;
+                max-width: 700px !important;
+                width: 100% !important;
+                max-height: 90vh !important;
+                overflow-y: auto !important;
+                margin: auto !important;
+                box-shadow: 0 0 40px rgba(0, 0, 0, 0.95) !important;
+                z-index: 2147483646 !important;
+                scrollbar-width: none !important;
+                -ms-overflow-style: none !important;
+              }
+              
+              #payhip-modal-content-50::-webkit-scrollbar {
+                width: 0 !important;
+                height: 0 !important;
+              }
+              
+              #close-payhip-modal-50 {
+                position: absolute !important;
+                top: 10px !important;
+                right: 10px !important;
+                background: #ff6b81 !important;
+                color: white !important;
+                border: none !important;
+                border-radius: 50% !important;
+                width: 40px !important;
+                height: 40px !important;
+                font-size: 24px !important;
+                cursor: pointer !important;
+                z-index: 2147483645 !important;
+                font-weight: bold !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                padding: 0 !important;
+              }
+              
+              #payhip-iframe-50 {
+                width: 100% !important;
+                height: 100% !important;
+                border: none !important;
+                display: block !important;
+                position: relative !important;
+                z-index: 2147483644 !important;
+                overflow: hidden !important;
+                scrollbar-width: none !important;
+                -ms-overflow-style: none !important;
+              }
+              
+              #payhip-iframe-50::-webkit-scrollbar {
+                width: 0 !important;
+                height: 0 !important;
+              }
+              
+              /* $30 PayHip Modal Styles */
+              #payhip-modal-overlay-30 {
+                display: none !important;
+                position: absolute !important;
+                top: 0 !important;
+                left: 0 !important;
+                width: 100% !important;
+                height: 100% !important;
+                background: rgba(0, 0, 0, 0.85) !important;
+                z-index: 2147483647 !important;
+                justify-content: center !important;
+                align-items: center !important;
+                overflow-y: auto !important;
+                overflow-x: hidden !important;
+                padding: 20px !important;
+                scrollbar-width: none !important;
+                -ms-overflow-style: none !important;
+              }
+              
+              #payhip-modal-overlay-30::-webkit-scrollbar {
+                width: 0 !important;
+                height: 0 !important;
+              }
+              
+              #payhip-modal-overlay-30.show {
+                display: flex !important;
+              }
+              
+              #payhip-modal-content-30 {
+                position: relative !important;
+                background: #0a0f1b !important;
+                border-radius: 10px !important;
+                max-width: 700px !important;
+                width: 100% !important;
+                max-height: 90vh !important;
+                overflow: hidden !important;
+                margin: auto !important;
+                box-shadow: 0 0 40px rgba(0, 0, 0, 0.95) !important;
+                z-index: 2147483646 !important;
+                scrollbar-width: none !important;
+                -ms-overflow-style: none !important;
+              }
+              
+              #payhip-modal-content-30::-webkit-scrollbar {
+                width: 0 !important;
+                height: 0 !important;
+              }
+              
+              #close-payhip-modal-30 {
+                position: absolute !important;
+                top: 10px !important;
+                right: 10px !important;
+                background: #ff6b81 !important;
+                color: white !important;
+                border: none !important;
+                border-radius: 50% !important;
+                width: 40px !important;
+                height: 40px !important;
+                font-size: 24px !important;
+                cursor: pointer !important;
+                z-index: 2147483645 !important;
+                font-weight: bold !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                padding: 0 !important;
+              }
+              
+              #payhip-iframe-30 {
+                width: 100% !important;
+                height: 100% !important;
+                border: none !important;
+                display: block !important;
+                position: relative !important;
+                z-index: 2147483644 !important;
+                overflow: hidden !important;
+                scrollbar-width: none !important;
+                -ms-overflow-style: none !important;
+              }
+              
+              #payhip-iframe-30::-webkit-scrollbar {
+                width: 0 !important;
+                height: 0 !important;
+              }
+              
+              /* $15 PayHip Modal Styles */
+              #payhip-modal-overlay-15 {
+                display: none !important;
+                position: absolute !important;
+                top: 0 !important;
+                left: 0 !important;
+                width: 100% !important;
+                height: 100% !important;
+                background: rgba(0, 0, 0, 0.85) !important;
+                z-index: 2147483647 !important;
+                justify-content: center !important;
+                align-items: center !important;
+                overflow-y: auto !important;
+                overflow-x: hidden !important;
+                padding: 20px !important;
+                scrollbar-width: none !important;
+                -ms-overflow-style: none !important;
+              }
+              
+              #payhip-modal-overlay-15::-webkit-scrollbar {
+                width: 0 !important;
+                height: 0 !important;
+              }
+              
+              #payhip-modal-overlay-15.show {
+                display: flex !important;
+              }
+              
+              #payhip-modal-content-15 {
+                position: relative !important;
+                background: #0a0f1b !important;
+                border-radius: 10px !important;
+                max-width: 700px !important;
+                width: 100% !important;
+                max-height: 90vh !important;
+                overflow-y: auto !important;
+                margin: auto !important;
+                box-shadow: 0 0 40px rgba(0, 0, 0, 0.95) !important;
+                z-index: 2147483646 !important;
+                scrollbar-width: none !important;
+                -ms-overflow-style: none !important;
+              }
+              
+              #payhip-modal-content-15::-webkit-scrollbar {
+                width: 0 !important;
+                height: 0 !important;
+              }
+              
+              #close-payhip-modal-15 {
+                position: absolute !important;
+                top: 10px !important;
+                right: 10px !important;
+                background: #ff6b81 !important;
+                color: white !important;
+                border: none !important;
+                border-radius: 50% !important;
+                width: 40px !important;
+                height: 40px !important;
+                font-size: 24px !important;
+                cursor: pointer !important;
+                z-index: 2147483645 !important;
+                font-weight: bold !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                padding: 0 !important;
+              }
+              
+              #payhip-iframe-15 {
+                width: 100% !important;
+                height: 100% !important;
+                border: none !important;
+                display: block !important;
+                position: relative !important;
+                z-index: 2147483644 !important;
+                overflow: hidden !important;
+                scrollbar-width: none !important;
+                -ms-overflow-style: none !important;
+              }
+              
+              #payhip-iframe-15::-webkit-scrollbar {
+                width: 0 !important;
+                height: 0 !important;
+              }
+            </style>
+            
+            <!-- PayHip Embed Modal Overlay for Bronze Tier ($1) -->
+            <div id="payhip-modal-overlay-1">
+              <div id="payhip-modal-content-1">
+                <button id="close-payhip-modal-1">&times;</button>
+                <iframe id="payhip-iframe-1" src="https://payhip.com/b/DNcP6?is_embed_page=1" allowtransparency="true" scrolling="no"></iframe>
+              </div>
+            </div>
+            
+            <!-- PayHip Embed Modal Overlay for Gold Tier ($5) -->
+            <div id="payhip-modal-overlay">
+              <div id="payhip-modal-content">
+                <button id="close-payhip-modal">&times;</button>
+                <iframe id="payhip-iframe" src="https://payhip.com/b/Ne1wg?is_embed_page=1" allowtransparency="true" scrolling="no"></iframe>
+              </div>
+            </div>
+            
+            <!-- PayHip Embed Modal Overlay for Silver Tier ($3) -->
+            <div id="payhip-modal-overlay-3">
+              <div id="payhip-modal-content-3">
+                <button id="close-payhip-modal-3">&times;</button>
+                <iframe id="payhip-iframe-3" src="https://payhip.com/b/sVM3R?is_embed_page=1" allowtransparency="true" scrolling="no"></iframe>
+              </div>
+            </div>
+            
+            <!-- PayHip Embed Modal Overlay for Silver Tier ($10) -->
+            <div id="payhip-modal-overlay-10">
+              <div id="payhip-modal-content-10">
+                <button id="close-payhip-modal-10">&times;</button>
+                <iframe id="payhip-iframe-10" src="https://payhip.com/b/IRowS?is_embed_page=1" allowtransparency="true" scrolling="no"></iframe>
+              </div>
+            </div>
+            
+            <!-- PayHip Embed Modal Overlay for Platinum Tier ($20) -->
+            <div id="payhip-modal-overlay-20">
+              <div id="payhip-modal-content-20">
+                <button id="close-payhip-modal-20">&times;</button>
+                <iframe id="payhip-iframe-20" src="https://payhip.com/b/uKf7e?is_embed_page=1" allowtransparency="true" scrolling="no"></iframe>
+              </div>
+            </div>
+            
+            <!-- PayHip Embed Modal Overlay for Conqueror Tier ($50) -->
+            <div id="payhip-modal-overlay-50">
+              <div id="payhip-modal-content-50">
+                <button id="close-payhip-modal-50">&times;</button>
+                <iframe id="payhip-iframe-50" src="https://payhip.com/b/PTq6g?is_embed_page=1" allowtransparency="true" scrolling="no"></iframe>
+              </div>
+            </div>
+            
+            <!-- PayHip Embed Modal Overlay for Crown Tier ($30) -->
+            <div id="payhip-modal-overlay-30">
+              <div id="payhip-modal-content-30">
+                <button id="close-payhip-modal-30">&times;</button>
+                <iframe id="payhip-iframe-30" src="https://payhip.com/b/uOAUN?is_embed_page=1" allowtransparency="true" scrolling="no"></iframe>
+              </div>
+            </div>
+            
+            <!-- PayHip Embed Modal Overlay for Diamond Tier ($15) -->
+            <div id="payhip-modal-overlay-15">
+              <div id="payhip-modal-content-15">
+                <button id="close-payhip-modal-15">&times;</button>
+                <iframe id="payhip-iframe-15" src="https://payhip.com/b/xsdHM?is_embed_page=1" allowtransparency="true" scrolling="no"></iframe>
+              </div>
+            </div>
+            <!-- PAYHIP SCRIPT REMOVED - Loaded dynamically in Phase 2 via phase-2-payhip-loader.js -->
+            <script>
+              // PayHip modal management - move to mobile-shell to keep within viewport
+              // This is initialized by phase-2-payhip-loader.js after user clicks Spin
+              document.addEventListener('DOMContentLoaded', function() {
+                const modal = document.getElementById('payhip-modal-overlay');
+                const modal1 = document.getElementById('payhip-modal-overlay-1');
+                const modal3 = document.getElementById('payhip-modal-overlay-3');
+                const modal10 = document.getElementById('payhip-modal-overlay-10');
+                const modal15 = document.getElementById('payhip-modal-overlay-15');
+                const modal20 = document.getElementById('payhip-modal-overlay-20');
+                const modal30 = document.getElementById('payhip-modal-overlay-30');
+                const modal50 = document.getElementById('payhip-modal-overlay-50');
+                const mobileShell = document.querySelector('.mobile-shell');
+                
+                // Move $1 modal to mobile-shell to stay within mobile viewport
+                if (modal1 && mobileShell && modal1.parentNode !== mobileShell) {
+                  mobileShell.appendChild(modal1);
+                }
+                
+                // Move $3 modal to mobile-shell to stay within mobile viewport
+                if (modal3 && mobileShell && modal3.parentNode !== mobileShell) {
+                  mobileShell.appendChild(modal3);
+                }
+                
+                // Move $5 modal to mobile-shell to stay within mobile viewport
+                if (modal && mobileShell && modal.parentNode !== mobileShell) {
+                  mobileShell.appendChild(modal);
+                }
+                
+                // Move $10 modal to mobile-shell to stay within mobile viewport
+                if (modal10 && mobileShell && modal10.parentNode !== mobileShell) {
+                  mobileShell.appendChild(modal10);
+                }
+                
+                // Move $15 modal to mobile-shell to stay within mobile viewport
+                if (modal15 && mobileShell && modal15.parentNode !== mobileShell) {
+                  mobileShell.appendChild(modal15);
+                }
+                
+                // Move $20 modal to mobile-shell to stay within mobile viewport
+                if (modal20 && mobileShell && modal20.parentNode !== mobileShell) {
+                  mobileShell.appendChild(modal20);
+                }
+                
+                // Move $30 modal to mobile-shell to stay within mobile viewport
+                if (modal30 && mobileShell && modal30.parentNode !== mobileShell) {
+                  mobileShell.appendChild(modal30);
+                }
+                
+                // Move $50 modal to mobile-shell to stay within mobile viewport
+                if (modal50 && mobileShell && modal50.parentNode !== mobileShell) {
+                  mobileShell.appendChild(modal50);
+                }
+                
+                // Setup $1 PayHip Modal
+                const closeBtn1 = document.getElementById('close-payhip-modal-1');
+                
+                if (closeBtn1 && modal1) {
+                  closeBtn1.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    modal1.classList.remove('show');
+                    document.body.style.overflow = '';
+                  });
+                  
+                  // Close modal when clicking on overlay background
+                  modal1.addEventListener('click', function(e) {
+                    if (e.target === modal1) {
+                      modal1.classList.remove('show');
+                      document.body.style.overflow = '';
+                    }
+                  });
+                  
+                  // Prevent closing when clicking inside modal content
+                  document.getElementById('payhip-modal-content-1').addEventListener('click', function(e) {
+                    e.stopPropagation();
+                  });
+                }
+                
+                // Setup $3 PayHip Modal
+                const closeBtn3 = document.getElementById('close-payhip-modal-3');
+                
+                if (closeBtn3 && modal3) {
+                  closeBtn3.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    modal3.classList.remove('show');
+                    document.body.style.overflow = '';
+                  });
+                  
+                  // Close modal when clicking on overlay background
+                  modal3.addEventListener('click', function(e) {
+                    if (e.target === modal3) {
+                      modal3.classList.remove('show');
+                      document.body.style.overflow = '';
+                    }
+                  });
+                  
+                  // Prevent closing when clicking inside modal content
+                  document.getElementById('payhip-modal-content-3').addEventListener('click', function(e) {
+                    e.stopPropagation();
+                  });
+                }
+                
+                // Setup $5 PayHip Modal
+                const closeBtn = document.getElementById('close-payhip-modal');
+                
+                if (closeBtn && modal) {
+                  closeBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    modal.classList.remove('show');
+                    document.body.style.overflow = '';
+                  });
+                  
+                  // Close modal when clicking on overlay background
+                  modal.addEventListener('click', function(e) {
+                    if (e.target === modal) {
+                      modal.classList.remove('show');
+                      document.body.style.overflow = '';
+                    }
+                  });
+                  
+                  // Prevent closing when clicking inside modal content
+                  document.getElementById('payhip-modal-content').addEventListener('click', function(e) {
+                    e.stopPropagation();
+                  });
+                }
+                
+                // Setup $10 PayHip Modal
+                const closeBtn10 = document.getElementById('close-payhip-modal-10');
+                
+                if (closeBtn10 && modal10) {
+                  closeBtn10.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    modal10.classList.remove('show');
+                    document.body.style.overflow = '';
+                  });
+                  
+                  // Close modal when clicking on overlay background
+                  modal10.addEventListener('click', function(e) {
+                    if (e.target === modal10) {
+                      modal10.classList.remove('show');
+                      document.body.style.overflow = '';
+                    }
+                  });
+                  
+                  // Prevent closing when clicking inside modal content
+                  document.getElementById('payhip-modal-content-10').addEventListener('click', function(e) {
+                    e.stopPropagation();
+                  });
+                }
+                
+                // Setup $15 PayHip Modal
+                const closeBtn15 = document.getElementById('close-payhip-modal-15');
+                
+                if (closeBtn15 && modal15) {
+                  closeBtn15.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    modal15.classList.remove('show');
+                    document.body.style.overflow = '';
+                  });
+                  
+                  // Close modal when clicking on overlay background
+                  modal15.addEventListener('click', function(e) {
+                    if (e.target === modal15) {
+                      modal15.classList.remove('show');
+                      document.body.style.overflow = '';
+                    }
+                  });
+                  
+                  // Prevent closing when clicking inside modal content
+                  document.getElementById('payhip-modal-content-15').addEventListener('click', function(e) {
+                    e.stopPropagation();
+                  });
+                }
+                
+                // Setup $20 PayHip Modal
+                const closeBtn20 = document.getElementById('close-payhip-modal-20');
+                
+                if (closeBtn20 && modal20) {
+                  closeBtn20.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    modal20.classList.remove('show');
+                    document.body.style.overflow = '';
+                  });
+                  
+                  // Close modal when clicking on overlay background
+                  modal20.addEventListener('click', function(e) {
+                    if (e.target === modal20) {
+                      modal20.classList.remove('show');
+                      document.body.style.overflow = '';
+                    }
+                  });
+                  
+                  // Prevent closing when clicking inside modal content
+                  document.getElementById('payhip-modal-content-20').addEventListener('click', function(e) {
+                    e.stopPropagation();
+                  });
+                }
+                
+                // Setup $30 PayHip Modal
+                const closeBtn30 = document.getElementById('close-payhip-modal-30');
+                
+                if (closeBtn30 && modal30) {
+                  closeBtn30.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    modal30.classList.remove('show');
+                    document.body.style.overflow = '';
+                  });
+                  
+                  // Close modal when clicking on overlay background
+                  modal30.addEventListener('click', function(e) {
+                    if (e.target === modal30) {
+                      modal30.classList.remove('show');
+                      document.body.style.overflow = '';
+                    }
+                  });
+                  
+                  // Prevent closing when clicking inside modal content
+                  document.getElementById('payhip-modal-content-30').addEventListener('click', function(e) {
+                    e.stopPropagation();
+                  });
+                }
+                
+                // Setup $50 PayHip Modal
+                const closeBtn50 = document.getElementById('close-payhip-modal-50');
+                
+                if (closeBtn50 && modal50) {
+                  closeBtn50.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    modal50.classList.remove('show');
+                    document.body.style.overflow = '';
+                  });
+                  
+                  // Close modal when clicking on overlay background
+                  modal50.addEventListener('click', function(e) {
+                    if (e.target === modal50) {
+                      modal50.classList.remove('show');
+                      document.body.style.overflow = '';
+                    }
+                  });
+                  
+                  // Prevent closing when clicking inside modal content
+                  document.getElementById('payhip-modal-content-50').addEventListener('click', function(e) {
+                    e.stopPropagation();
+                  });
+                }
+                
+                // Store references to show modals from suggestion box handler
+                window.showPayHipModal1 = function() {
+                  if (modal1) {
+                    modal1.classList.add('show');
+                    document.body.style.overflow = 'hidden';
+                  }
+                };
+                
+                window.showPayHipModal3 = function() {
+                  if (modal3) {
+                    modal3.classList.add('show');
+                    document.body.style.overflow = 'hidden';
+                  }
+                };
+                
+                window.showPayHipModal = function() {
+                  if (modal) {
+                    modal.classList.add('show');
+                    document.body.style.overflow = 'hidden';
+                  }
+                };
+                
+                window.showPayHipModal10 = function() {
+                  if (modal10) {
+                    modal10.classList.add('show');
+                    document.body.style.overflow = 'hidden';
+                  }
+                };
+                
+                window.showPayHipModal15 = function() {
+                  if (modal15) {
+                    modal15.classList.add('show');
+                    document.body.style.overflow = 'hidden';
+                  }
+                };
+                
+                window.showPayHipModal20 = function() {
+                  if (modal20) {
+                    modal20.classList.add('show');
+                    document.body.style.overflow = 'hidden';
+                  }
+                };
+                
+                window.showPayHipModal30 = function() {
+                  if (modal30) {
+                    modal30.classList.add('show');
+                    document.body.style.overflow = 'hidden';
+                  }
+                };
+                
+                window.showPayHipModal50 = function() {
+                  if (modal50) {
+                    modal50.classList.add('show');
+                    document.body.style.overflow = 'hidden';
+                  }
+                };
+              });
+            </script>
+
+            <div
+              class="row fullwidth-row"
+              style="
+                margin: 3px 6px 0;
+                flex-direction: column;
+                align-items: stretch;
+              "
+            >
+                    
+            </div>
+          </div>
+
+          <div class="row" style="margin:-99px 6px 0"></div>
+  </section>
+  <div style="margin-top: 9px; margin-left: 18px;"></div>
+
+        <!-- Phase 2: Pills Game -->
+        <section id="p2" class="screen">
+          <div id="electric-sparks-overlay" style="display:none; position:fixed; left:0; top:0; width:100vw; height:100vh; pointer-events:none; z-index:-99999;"></div>
+          <div class="card" style="margin-bottom: 2px;position:relative;z-index:-9999;overflow:hidden;background:none;margin-top: -2.4cm;margin-bottom: -1cm;">
+      <script>
+        // Show electric sparks overlay only in phase 2
+        function showElectricSparksOverlay() {
+          var p2 = document.getElementById('p2');
+          var overlay = document.getElementById('electric-sparks-overlay');
+          if (overlay && overlay.parentNode !== document.body) {
+            document.body.appendChild(overlay); // Always last child of body
+          }
+          if (p2 && overlay) {
+            overlay.style.zIndex = '2147483647'; // Max z-index
+            if (p2.classList.contains('active')) {
+              overlay.style.display = 'block';
+            } else {
+              overlay.style.display = 'none';
+            }
+          }
+        }
+        document.addEventListener('DOMContentLoaded', showElectricSparksOverlay);
+        var phaseEls = document.querySelectorAll('.screen');
+        phaseEls.forEach(function(el) {
+          var obs = new MutationObserver(showElectricSparksOverlay);
+          obs.observe(el, { attributes: true });
+        });
+
+        // Electric sparks animation
+                function animateElectricSparks() {
+                  var overlay = document.getElementById('electric-sparks-overlay');
+                  if (!overlay) return;
+                  overlay.innerHTML = '';
+                  var sparks = [];
+                  var sparkCount = 3; // reduced by 50% from 6
+                  for (var i = 0; i < sparkCount; i++) {
+                    var spark = document.createElement('div');
+                    var x = Math.random() * window.innerWidth;
+                    var y = Math.random() * window.innerHeight;
+                    var len = 40 + Math.random() * 60; // shorter sparks
+                    var rot = Math.random() * 360;
+                    spark.style.position = 'absolute';
+                    spark.style.left = x + 'px';
+                    spark.style.top = y + 'px';
+                    spark.style.width = len + 'px';
+                    spark.style.height = '2px';
+                    spark.style.background = 'linear-gradient(90deg, #00ffcc 0%, #fff 60%, #4efc8d 100%)';
+                    spark.style.boxShadow = '0 0 4px #00ffcc, 0 0 6px #fff'; // 50% less glow
+                    spark.style.opacity = 0.175 + Math.random() * 0.125; // 50% lower opacity
+                    spark.style.transform = 'rotate(' + rot + 'deg)';
+                    spark.style.borderRadius = '2px';
+                    spark.style.pointerEvents = 'none';
+                    spark.style.zIndex = '99999';
+                    overlay.appendChild(spark);
+                  }
+                }
+        setInterval(function() {
+          var p2 = document.getElementById('p2');
+          if (p2 && p2.classList.contains('active')) {
+            animateElectricSparks();
+          }
+        }, 700);
+      </script>
+              <video autoplay loop muted playsinline style="position:absolute;z-index:-10;border-radius:16px;top:0;left:0;width:100%;height:100%;object-fit:cover;pointer-events:none;">
+                <source src="site-asse-voices/matrixbg.mp4" type="video/mp4">
+              </video>
+              <!-- Matrix Rain Canvas is injected by JS with z-index:2 -->
+              <div style="position:relative;z-index:1;border-radius:56px;padding:16px 24px 12px 24px;">
+              <strong id="phase2Title" style="position:relative;z-index:4;background: linear-gradient(90deg, #00ffcc 0%, #4efc8d 60%, #fff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 900; font-size: 1.4em; text-shadow: 0 0 18px #00ffcc88, 0 2px 12px #00ffcc44; filter: blur(0.5px); animation: matrixFlicker 1.8s infinite alternate cubic-bezier(.7,.2,.3,.8); display:block; width:100%; text-align:center; white-space:nowrap;">Phase 2 — Matrix Pills </strong>
+            <div class="hint">
+              Pick a pill. 50% chance to win <b>+20
+              <b>−20 BP</b>. 
+            </div>
+          </div>
+          <div class="card" style="background:none!important;box-shadow:none!important;">
+            <div class="card" style="background: url('site-asse-voices/pillsbg.webp') center center/cover no-repeat; position: relative; z-index:2;">
+              <div class="row" style="justify-content: center; position:relative; z-index:2;">
+                <button id="greenPill" class="cta secondary" style="padding:0;border:none;background:none;display:flex;align-items:center;justify-content:center;">
+                  <img src="site-asse-voices/greenpill.webp" alt="Green Pill" class="pill-glow-blue" style="width:53%;height:70%;object-fit:contain;display:block;position:relative;top: -10px;" loading="lazy" />
+                </button>
+                <button id="redPill" class="cta secondary" style="padding:0 0 0 32px;border:none;background:none;display:flex;align-items:center;justify-content:center;">
+                  <img src="site-asse-voices/redpill.webp" alt="Red Pill" class="pill-glow-red" style="width:50%;height:68%;object-fit:contain;display:block;" loading="lazy" />
+                </button>
+              </div>
+            </div>
+            <!-- Moved elements below the pills card section, now without wrapper -->
+            <div id="pillNote" style="margin-top: 18px; text-align:center; background:none; box-shadow:none; padding:0;">
+                <span style="background: linear-gradient(90deg,#05d652 0%,#06bc4c 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 900; position:relative; z-index:4; filter: blur(0.5px); text-shadow: 0 0 12px rgba(5,214,82,0.20), 0 2px 8px rgba(6,188,76,0.18); animation: matrixFlicker 1.8s infinite alternate cubic-bezier(.7,.2,.3,.8);">Tap a pill to reveal</span>
+            </div>
+            <div style="margin-top: 0.8in; display:flex; justify-content:center; gap:8px;margin-bottom: 10px; background:none; box-shadow:none; padding:0;">
+              <input id="extraInvest" type="number" min="0" step="1" placeholder="Optional invest $ (adds to SB)" style="width:100%; height:48px; font-size:1.0rem; border-radius:12px; background:#10162a; color:#eaf0ff; border:1.5px solid rgba(0, 0, 0, 0.133); box-shadow:0 2px 8px #0002; padding:0 18px;">
+              <button id="addInvest" class="cta secondary" style="min-width:100px; height:50px; font-size:1.0rem; border-radius:16px; background: linear-gradient(100deg, #00ff99 0%, #00ffcc 60%, #0a0f1b 100%); box-shadow: 0 0 10px 2px #00ff99aa, 0 2px 6px #0a0f1b88; color: #0a0f1b; font-weight: 900; border: none; display:flex; align-items:center; justify-content:center; letter-spacing:0.04em; text-shadow: 0 2px 12px #00ff99cc, 0 1px 0 #0a0f1b; transition: box-shadow 0.3s, transform 0.2s;">Add to <span style="background: linear-gradient(90deg, #00ffcc 0%, #00ff99 80%, #0a0f1b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 900; text-shadow: 0 2px 12px #000000cc, 0 1px 0 #0a0f1b;">SB</span></button>
+            </div>
+            <script>
+              // Show wallets when pill is clicked in Phase 2
+              document.addEventListener('DOMContentLoaded', function() {
+                const greenPill = document.getElementById('greenPill');
+                const redPill = document.getElementById('redPill');
+                const resetBtn = document.getElementById('resetAll');
+                const blessingBubbles = document.querySelectorAll('.blessing-bubble');
+                
+                function showWallets() {
+                  blessingBubbles.forEach(function(bubble) {
+                    bubble.classList.add('pill-picked');
+                  });
+                }
+                
+                function hideWallets() {
+                  blessingBubbles.forEach(function(bubble) {
+                    bubble.classList.remove('pill-picked');
+                  });
+                }
+                
+                if (greenPill) {
+                  greenPill.addEventListener('click', showWallets);
+                }
+                if (redPill) {
+                  redPill.addEventListener('click', showWallets);
+                }
+                if (resetBtn) {
+                  resetBtn.addEventListener('click', hideWallets);
+                }
+              });
+            </script>
+            </div>
+          </div>
+  <style>
+    .pill-glow-blue {
+      filter: drop-shadow(0 0 18px #00eaff) drop-shadow(0 0 32px #00eaff88);
+      transition: filter 0.2s;
+  animation: pill-roll-in 2.2s cubic-bezier(.7,.2,.3,.8) 0.1s both, pill-rock 2.8s 2.3s 1 ease-in-out alternate, pill-float 4.2s 4.9s infinite ease-in-out alternate;
+      transform-style: preserve-3d;
+    }
+  .pill-glow-red {
+    filter: drop-shadow(0 0 18px #ff2a2a) drop-shadow(0 02 32px #ff2a2a88);
+    transition: filter 0.2s;
+    animation: pill-roll-in 2.2s cubic-bezier(.7,.2,.3,.8) 0.3s both, pill-rock 2.8s 2.3s 1 ease-in-out alternate, pill-float 4.2s 4.9s infinite ease-in-out alternate;
+    transform-style: preserve-3d;
+  }
+  @keyframes pill-float {
+    0% {
+      transform: translateY(0) scale(1) rotateX(0deg) rotateZ(0deg);
+    }
+    20% {
+      transform: translateY(2px) scale(1.01) rotateX(-2deg) rotateZ(1deg);
+    }
+    50% {
+      transform: translateY(-2px) scale(0.99) rotateX(2deg) rotateZ(-1deg);
+    }
+    80% {
+      transform: translateY(1.5px) scale(1.01) rotateX(-1deg) rotateZ(0.5deg);
+    }
+    100% {
+      transform: translateY(0) scale(1) rotateX(0deg) rotateZ(0deg);
+    }
+  }
+    @keyframes pill-roll-in {
+      0% {
+        transform: translateY(-60px) scale(0.7) rotateX(60deg) rotateZ(-18deg);
+        opacity: 0.2;
+      }
+      40% {
+        transform: translateY(-18px) scale(0.85) rotateX(24deg) rotateZ(-6deg);
+        opacity: 0.7;
+      }
+      70% {
+        transform: translateY(0) scale(1.05) rotateX(-8deg) rotateZ(2deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(0) scale(1) rotateX(0deg) rotateZ(0deg);
+        opacity: 1;
+      }
+    }
+    @keyframes pill-rock {
+      0% {
+        transform: translateY(0) scale(1) rotateX(0deg) rotateZ(0deg);
+      }
+      50% {
+        transform: translateY(3px) scale(1.01) rotateX(-4deg) rotateZ(2deg);
+      }
+      100% {
+        transform: translateY(-2px) scale(0.99) rotateX(3deg) rotateZ(-2deg);
+      }
+    }
+    @keyframes matrixFlicker {
+      0% { filter: blur(0.5px) brightness(1.1); opacity: 1; }
+      10% { filter: blur(1.2px) brightness(1.3); opacity: 0.92; }
+      20% { filter: blur(0.7px) brightness(1.2); opacity: 1; }
+      30% { filter: blur(1.5px) brightness(1.4); opacity: 0.88; }
+      40% { filter: blur(0.5px) brightness(1.1); opacity: 1; }
+      50% { filter: blur(1.2px) brightness(1.3); opacity: 0.92; }
+      60% { filter: blur(0.7px) brightness(1.2); opacity: 1; }
+      70% { filter: blur(1.5px) brightness(1.4); opacity: 0.88; }
+      80% { filter: blur(0.5px) brightness(1.1); opacity: 1; }
+      100% { filter: blur(0.5px) brightness(1.1); opacity: 1; }
+    }
+    .matrix-rain-canvas {
+      position: fixed !important;
+      left: 0; top: 0; width: 100vw; height: 100vh;
+      z-index: 2 !important;
+      pointer-events: none;
+      mix-blend-mode: lighten;
+    }
+    @keyframes spin-vibrate {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  5% { transform: translate(-2px, 2px) rotate(-2deg); }
+  10% { transform: translate(2px, -2px) rotate(2deg); }
+  15% { transform: translate(-3px, 3px) rotate(-3deg); }
+  20% { transform: translate(3px, -3px) rotate(3deg); }
+  25% { transform: translate(-4px, 4px) rotate(-4deg); }
+  30% { transform: translate(4px, -4px) rotate(4deg); }
+  35% { transform: translate(-3px, 3px) rotate(-3deg); }
+  40% { transform: translate(3px, -3px) rotate(3deg); }
+  45% { transform: translate(-2px, 2px) rotate(-2deg); }
+  50% { transform: translate(2px, -2px) rotate(2deg); }
+  55% { transform: translate(-1px, 1px) rotate(-1deg); }
+  60% { transform: translate(1px, -1px) rotate(1deg); }
+  65% { transform: translate(0, 0) rotate(0deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+#spinBp.vibrate {
+  animation: spin-vibrate 0.5s cubic-bezier(.7,.2,.3,.8);
+}
+  </style>
+<script>
+// Vibrate the Spin button for 0.5s every 1.5s
+function startSpinVibration() {
+  var btn = document.getElementById('spinBp');
+  if (!btn) return;
+  setInterval(function() {
+    btn.classList.add('vibrate');
+    setTimeout(function() {
+      btn.classList.remove('vibrate');
+    }, 500);
+  }, 1500);
+}
+document.addEventListener('DOMContentLoaded', startSpinVibration);
+</script>
+          <div class="row" style="margin:12px 6px 0"></div>
+        </section>
+
+        <!-- Phase 3: 5 Questions (+3 BP each) (MCQ page — own submit button; shared controller shows NO continue) -->
+        <section id="p3" class="screen">
+          <div class="card" style="margin-bottom: 0px; position: relative; overflow: hidden; background: none; margin-top: -1.4cm;">
+            <img src="site-asse-voices/woodencard.webp" alt="Wooden Card" style="position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;z-index:0;pointer-events:none;filter:drop-shadow(0 2px 12px #0008);border-radius:6px;" loading="lazy" />
+                <strong style="position:relative;z-index:2;background: linear-gradient(90deg, #fff700 0%, #4efc8d 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 900; font-size: 1.25em;">Phase 3 — Oracle's Trial</strong>
+            <div class="hint" style="position:relative;z-index:2;">
+            <span style="color:#a6ec44;font-weight:600;font-size:1.20em;">“Five questions. Five chances. Wisdom is the path, blessing is the reward.”</span>
+            </div>
+          </div>
+          <div class="card" id="quiz" style="background: url('site-asse-voices/woodencard.webp') center center/0% 175% no-repeat; border-radius: 28px; min-height: 5cm;min-width: 215px; max-width: 390px;margin-right: -15px; box-shadow: 0 2px 12px rgba(219, 148, 6, 0.533); margin-bottom: 0;"><div id="quiz-question-container"></div></div>
+          
+          <!-- Ropes for Phase 3 (hanging effect) -->
+          <img id="roperight" src="site-asse-voices/rope.webp" alt="Right Rope" style="position: absolute; right: -104px; top: 5px; height: 3in; width: auto; object-fit: contain; z-index: 1; pointer-events: none;" loading="lazy" />
+          <img id="ropeleft" src="site-asse-voices/rope.webp" alt="Left Rope" style="position: absolute; left: -104px; top: 0px; height: 3in; width: auto; object-fit: contain; z-index: 1; pointer-events: none;" loading="lazy" />
+          </script>
+        </section>
+
+        <!-- Phase 4: Spinning Calendar (biased to Dec/Jan) -->
+        <section id="p4" class="screen">
+          <div class="card" style="margin-bottom: 5px; margin-top: -5.3cm;">
+            <div class="phase4-heatwave-bg">
+              <strong style="
+                position:relative;
+                z-index:1;
+                font-family: 'Cinzel Decorative', 'UnifrakturCook', serif;
+                font-weight: 900;
+                font-size: 1.05em;
+                letter-spacing: 0.02em;
+                background: linear-gradient(90deg, #ff6a00 0%, #ffd700 20%, #ff4500 30%, #b30000 50%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-shadow:
+                  0 0 2px #000,
+                  0 0 6px #ff4500,
+                  0 0 12px #ffd700,
+                  0 2px 18px #ff4500,
+                  0 2px 24px #ffd700,
+                  0 2px 8px #8b0000,
+                  1px 1px 0 #222;
+                filter: drop-shadow(0 0 8px #ff4500) drop-shadow(0 0 4px #ffd700);
+                border-radius: 6px;
+                padding: 0.1em 0.2em;
+                display:block;
+              ">Phase 4 — Date OF Fate</strong>
+              <div class="hint">
+                <span style="font-weight: bold; color: #eee8aa; text-shadow:0 2px 12px #fffbe6cc, 0 1px 0 #fff;">Your destined day is written in time — let the wheel reveal your blessing.</span>
+              </div>
+            </div>
+          </div>
+          <div class="card transparent fate-bg-gradient" style="position:relative; border-radius:28px; min-height: 198px; max-height:298px; box-shadow:0 2px 12px rgba(219,148,6,0.33); overflow:visible; top:-0.3cm; pointer-events: auto;">
+            <div class="fate-particle-overlay"></div>
+            <div class="wheel-wrap" id="phase4">
+  <style>
+    #phase4 ~ #snow-canvas {
+      display: none !important;
+    }
+  </style>
+                <div class="pointer" aria-hidden="true" id="datePointer"
+                  style="position:absolute; top:36%; left:-04px; transform:translateY(-50%) rotate(180deg); width:57px; height:45px; background:linear-gradient(120deg,#000000 0%,#ff4d0c 60%,#bfae5e 100%); clip-path:polygon(0 50%, 100% 0, 90% 50%, 100% 100%); box-shadow:0 0 24px 8px #ffd36e88, 0 2px 12px #fffbe6cc, 0 0 0 2px #fff; border:2px solid #fffbe6; border-radius:8px 24px 24px 8px / 50% 50% 50% 50%; display:block; z-index:10;">
+                </div>
+                <style>
+                .fate-bg-gradient {
+                  background:
+                    radial-gradient(circle at 50% 40%, #FFD70033 0%, #FFD70022 18%, #80000088 38%, #0d0d0d 70%, #0d0d0d 100%),
+                    linear-gradient(120deg, #0d0d0d 0%, #800000 40%, #FFD700 100%);
+                  background-size: 120% 120%, 200% 200%;
+                  background-position: center center, 0% 50%;
+                  animation: fate-gradient-move 7s ease-in-out infinite alternate;
+                  position: relative;
+                  z-index: 1;
+                }
+
+                @keyframes fate-gradient-move {
+                  0% {
+                    background-position: center center, 0% 50%;
+                  }
+                  50% {
+                    background-position: center center, 100% 60%;
+                  }
+                  100% {
+                    background-position: center center, 0% 50%;
+                  }
+                }
+
+                .fate-particle-overlay {
+                  pointer-events: none;
+                  position: absolute;
+                  left: 0; top: 0; width: 100%; height: 100%;
+                  z-index: -1;
+                  overflow: hidden;
+                }
+                .fate-particle {
+                  position: absolute;
+                  border-radius: 50%;
+                  width: 6px; height: 6px;
+                  background: radial-gradient(circle, #FFD700 0%, #FFD70044 60%, transparent 100%);
+                  opacity: 0.18;
+                  animation: fate-particle-rise 8s linear infinite;
+                }
+                @keyframes fate-particle-rise {
+                  0% { transform: translateY(100%) scale(0.7); opacity: 0.18; }
+                  10% { opacity: 0.22; }
+                  80% { opacity: 0.13; }
+                  100% { transform: translateY(-10%) scale(1.1); opacity: 0; }
+                }
+                </style>
+                <script>
+                // Add faint rising particles to .fate-particle-overlay
+                document.addEventListener('DOMContentLoaded', function() {
+                  var overlay = document.querySelector('.fate-particle-overlay');
+                  if (overlay) {
+                    for (var i = 0; i < 12; i++) {
+                      var p = document.createElement('div');
+                      p.className = 'fate-particle';
+                      p.style.left = (Math.random()*90+5)+'%';
+                      p.style.top = (Math.random()*60+30)+'%';
+                      p.style.animationDelay = (Math.random()*7)+'s';
+                      overlay.appendChild(p);
+                    }
+                  }
+                });
+                </script>
+                <div style="position:relative; width:100%; max-width:340px; margin:auto; left:0.5cm; margin-top:-32px; padding-top:0;">
+                  <img id="dateWheelImg" src="site-asse-voices/datewheel.webp" alt="Date Wheel" style="width:100%; height:auto; display:block; border-radius:50%; max-width:220px; filter: drop-shadow(0 0 18px #fffbe6) drop-shadow(0 0 8px #ffe066);" />
+                  <canvas id="dateWheelCanvas" width="300" height="300" style="position:absolute; left:0; top:0; width:100%; height:100%; pointer-events:none;"></canvas>
+              </div>
+              <div style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 18px; margin-top: -0.5cm; position: relative; z-index: 10001; pointer-events: auto; width: 100%;">
+                <button id="spinDate" class="cta" style="background: linear-gradient(90deg, #FF4500 0%, #FF6A00 100%); border: 2.5px solid #FFD700; box-shadow: 0 0 18px 4px #FFD700, 0 2px 12px #FFD70088; color: #fff; font-weight: bold; text-shadow: 0 0 8px #FFD700, 0 1px 0 #FFD700; filter: drop-shadow(0 0 6px #FFD700); margin:0; position: relative; z-index: 100000; pointer-events: auto; cursor: pointer;">Reveal Destiny..</button>
+              </div>
+                <div class="row" style="margin-top: -1.0cm; position: relative; z-index: 10; pointer-events: auto;">
+                  <button class="cta secondary" id="showCal" style="display:none; opacity:0; transition:opacity 0.8s; background: linear-gradient(120deg, #0d0d0d 0%, #800000 40%, #5a511f 100%); color: #FFD700; border: 2px solid #FFD700; box-shadow: 0 0 18px 4px #FFD70088, 0 2px 12px #FFD70044; position: relative; z-index: 10; pointer-events: auto; cursor: pointer;">Progress Calendar</button>
+                </div>
+              <div id="dateOutcome" class="bp-strip" style="
+                position: absolute;
+                right: +20px;
+                top: 0;
+                height: 260px;
+                display: flex;
+                align-items: center;
+                writing-mode: vertical-rl;
+                text-align: center;
+                font-size: 1.10em;
+                background: none;
+                border: none;
+                box-shadow: none;
+                color: #ecebe5;
+                font-weight: bold;
+                letter-spacing: 0.08em;
+                z-index: 10;
+              ">Blessing Date: —</div>
+            </div>
+            <div class="bp-strip" style="margin-top: 10px">
+            </div>
+            <div class="row" style="margin-top: 10px">
+              <!-- Removed duplicate Progress Calendar button -->
+            </div>
+            <div
+              id="plan"
+              class="card"
+              style="margin-top: 10px; display: none"
+            ></div>
+          </div>
+          <div class="row" style="margin: 12px 6px 0"></div>
+          <!-- DEV BUTTON: Skip to Phase 5 (for development only - remove after building) -->
+          <img id="firesurface-img" src="site-asse-voices/firesurface.gif" alt="Fire Surface" style="width:100%;height:3in;object-fit:cover;box-shadow:none;filter:drop-shadow(0 0 20px rgba(255, 100, 0, 0.8));position:absolute;left:0;bottom:0;z-index:5;display:none;pointer-events:none;" />
+          <!-- Skeletons for Phase 4 -->
+          <img id="skeleton-left" src="site-asse-voices/skelton.gif" alt="Skeleton Left" style="position:absolute;left:calc(-0.5cm - 3cm);bottom:0.1in;height:2.2in;width:auto;z-index:4;display:none;filter:drop-shadow(0 0 12px rgba(255, 100, 0, 0.6));pointer-events:none;" />
+          <img id="dance3-mid" src="site-asse-voices/dance3.gif" alt="Dancing Skeleton" style="position:absolute;left:50%;transform:translateX(-50%);bottom:0;height:2.2in;width:auto;z-index:4;display:none;filter:drop-shadow(0 0 12px rgba(255, 100, 0, 0.6));pointer-events:none;" />
+          <img id="skeleton-right" src="site-asse-voices/skelton.gif" alt="Skeleton Right" style="position:absolute;right:calc(-0.5cm - 2.6cm);bottom:0.1in;height:2.2in;width:auto;z-index:4;display:none;filter:drop-shadow(0 0 12px rgba(255, 100, 0, 0.6));pointer-events:none;" />
+        </section>
+
+        <!-- Phase 5: Signup + Referral (max 5, +20 BP each) -->
+        <section id="p5" class="screen">
+          <div class="card" style="margin-top: -5.25cm; margin-bottom: 2px">
+            <strong class="garden-heading">Phase 5 — <span class="garden-green" id="gardenWave">Garden of Blessings</span></strong>
+            <div class="garden-subtitle">
+              <span class="subtitle-titlecase">
+sign up, share your link, each soul by 10% add 50% increase in wining banlance by 5 souls—Nurture your circle in the Garden of Blessings
+              </span>
+            </div>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Cinzel+Decorative:wght@700&family=Montserrat:wght@400;700;900&family=Poppins:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet">
+    <style>
+  .garden-heading {
+        font-family: 'Playfair Display', 'Cinzel Decorative', serif;
+  font-size: 1.09em;
+        font-weight: 700;
+        text-transform: uppercase;
+    background: linear-gradient(90deg, #0a0f1a 10%, #2d0a4f 60%, #8a00fa 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        text-shadow:
+          2px 2px 8px rgba(0,0,0,0.9),
+          0 0 8px #FFD700,
+          0 0 4px #fff;
+        filter: drop-shadow(0 0 8px #FFD70088) drop-shadow(0 0 6px #fff8);
+        animation: garden-glow 5s ease-in-out infinite;
+        position: relative;
+        letter-spacing: 0.04em;
+        margin-bottom: 0.18em;
+        padding: 0.1em 0.2em;
+        border-radius: 8px;
+        background-size: 200% 100%;
+        overflow: visible;
+      }
+      @keyframes garden-glow {
+        0% { filter: drop-shadow(0 0 8px #FFD70088) drop-shadow(0 0 6px #fff8); opacity: 1; }
+        40% { filter: drop-shadow(0 0 18px #FFD700cc) drop-shadow(0 0 16px #fff); opacity: 1; }
+        60% { filter: drop-shadow(0 0 18px #FFD700cc) drop-shadow(0 0 16px #fff); opacity: 1; }
+        100% { filter: drop-shadow(0 0 8px #FFD70088) drop-shadow(0 0 6px #fff8); opacity: 1; }
+      }
+      .garden-heading::after {
+        content: '';
+        position: absolute;
+        left: 0; top: 0; width: 100%; height: 100%;
+        pointer-events: none;
+        background: linear-gradient(100deg, rgba(255,215,0,0.18) 0%, rgba(255,215,0,0.33) 50%, rgba(255,215,0,0.18) 100%);
+        mix-blend-mode: lighten;
+        border-radius: 8px;
+        animation: garden-shimmer 4.5s linear infinite;
+        z-index: 2;
+      }
+      @keyframes garden-shimmer {
+        0% { background-position: -120% 0; }
+        100% { background-position: 120% 0; }
+      }
+      .garden-heading:hover::after {
+        background: linear-gradient(100deg, rgba(255,215,0,0.33) 0%, rgba(255,255,255,0.38) 50%, rgba(255,215,0,0.33) 100%);
+        filter: drop-shadow(0 0 12px #FFD70088);
+        animation: garden-shimmer 2.2s linear infinite;
+      }
+      /* Removed duplicate rules above */
+      .garden-subtitle {
+  font-family: 'Montserrat', 'Poppins', sans-serif;
+  font-size: 0.98em;
+  line-height: 1.18;
+  padding-left: 0.5cm;
+  color: #ff0000;
+  text-shadow: 0 2px 8px #fff, 0 0 4px #bfa97a88;
+  background: linear-gradient(90deg, rgba(255,255,255,0.82) 0%, rgba(255,239,186,0.72) 100%);
+  box-shadow: 0 2px 16px #fff8, 0 0 8px #bfa97a44;
+  border-radius: 12px;
+  letter-spacing: 1.8px;
+  font-weight: 700;
+  text-transform: none;
+}
+      .subtitle-titlecase {
+        font-variant-caps: normal;
+        text-transform: none;
+      }
+      .subtitle-titlecase .word {
+        font-weight: 500;
+        text-transform: none;
+      }
+      .subtitle-titlecase .first {
+        font-weight: 700;
+        font-size: 1.02em;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      @keyframes subtitle-fadein {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+      </style>
+          </div>
+          <div class="card">
+            <div class="hint" id="profileHint">
+              Create your profile to get your referral link.
+            </div>
+            <div id="signupSection" class="fade-section fade-in">
+              <div class="row">
+                <input id="username" type="text" placeholder="Username" />
+                <input id="email" type="email" placeholder="Email" />
+                <input id="wallet" type="text" placeholder="Payout Wallet (opt)" />
+                <button id="signup" class="cta emerald-referral">Generate Referral Link</button>
+              </div>
+            </div>
+            <div id="referralSection" class="fade-section" style="display:none;">
+              <style>
+                #referralSection:not([style*="display:none"]) ~ #profileHint,
+                #referralSection[style="display:block"] + * #profileHint {
+                  display: none !important;
+                }
+                /* Referral Section Layout Fix - Copy button and TB info positioning */
+                #referralSection > .row {
+                  display: flex !important;
+                  align-items: flex-start !important;
+                  gap: 6px !important;
+                }
+                #referralSection > .row > div:first-child {
+                  flex: 1;
+                  display: flex !important;
+                  flex-direction: column !important;
+                  gap: 6px !important;
+                }
+                #referralSection #copyLink {
+                  position: fixed !important;
+                  right: 78px !important;
+                  top: 80px !important;
+                  z-index: 1000 !important;
+                  margin: 0 !important;
+                  padding: 8px 16px !important;
+                  opacity: 1 !important;
+                  visibility: visible !important;
+                  animation: none !important;
+                }
+                #referralSection #tbInfo {
+                  margin-top: -7px !important;
+                  margin-left: -20px !important;
+                  padding: 0 !important;
+                  display: flex !important;
+                  flex-direction: row !important;
+                  gap: 2px !important;
+                  align-items: left !important;
+                  background: rgba(255,255,240,0.85) !important;
+                  width: 100% !important;
+                  height: 0.5cm !important;
+                  border-radius: 0 !important;
+                  padding-left: -2px !important;
+                  padding-right: 5px !important;
+                }
+                #referralSection #tbInfo > div:first-child {
+                  flex: 1;
+                  margin-right: -2px !important;
+                }
+                #referralSection #tbInfo > div:last-child {
+                  text-align: left !important;
+                  white-space: nowrap;
+                  margin-left: -2px !important;
+                }
+              </style>
+              <div class="row" style="gap: -12px; align-items: flex-start; margin-bottom: 20px;margin-top: -10px;">
+                <div style="flex: 1; display: flex; flex-direction: column; gap: 4px;">
+                  <input id="refLink" readonly style="flex: 1; min-width: 100px;" />
+                  <button id="copyLink" class="cta secondary">Copy</button>
+                  <!-- TB Calculation Display -->
+                  <div id="tbInfo" style="margin-top: 4px;margin-left: -20px; padding: 0; color: #ee0000; font-size: 0.75em; font-weight: 600; font-family: 'Poppins', sans-serif; line-height: 1.2; display: flex; flex-direction: column; gap: 5px;">
+                    <div>By 50% your withdrawable(TB) will</div>
+                    <div style="text-align: right; color: #070707; font-weight: 900;font-weight: bold;"><span id="tbAmount">$0</span></div>
+                  </div>
+                </div>
+                <div class="invite-grid-top" style="display: grid; grid-template-columns: 1fr 1fr; gap: 5px; flex: 1;margin-top: -1px;">
+                  <div class="invite-slot" id="inviteSlot0">Soul: 1</div>
+                  <div class="invite-slot" id="inviteSlot1">Soul: 2</div>
+                </div>
+              </div>
+              <div class="invite-grid-bottom" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px;">
+                <div class="invite-slot" id="inviteSlot2">Soul: 3</div>
+                <div class="invite-slot" id="inviteSlot3">Soul: 4</div>
+                <div class="invite-slot" id="inviteSlot4">Soul: 5</div>
+              </div>
+              
+              <!-- Comment Box Section - NOW INSIDE REFERRAL SECTION, FADES IN TOGETHER -->
+              <div id="commentSection" style="margin-top: 24px; padding: 16px; background: rgba(212, 175, 55, 0.2); border-radius: 14px; border: 2px solid #d4af37;">
+                <div style="color: #fff; font-size: 0.9em; font-weight: 600; margin-bottom: 12px;">Share your thought:</div>
+                <div id="commentInputArea" style="display: flex; gap: 12px; align-items: center;">
+                  <input 
+                    id="commentInput" 
+                    type="text" 
+                    placeholder="Type your comment here..." 
+                    maxlength="150"
+                    style="flex: 1; padding: 12px; background: rgba(212, 175, 55, 0.3); color: #fff; border: 1px solid rgba(212, 175, 55, 0.7); border-radius: 8px; font-size: 0.95em; font-family: 'Poppins', sans-serif;"
+                  />
+                  <button 
+                    id="submitComment" 
+                    onclick="window.submitUserComment()"
+                    style="background: linear-gradient(180deg, #d4af37 0%, #b89c2a 100%); color: #0a0f1a; border: none; border-radius: 8px; padding: 12px 20px; font-weight: 700; font-size: 0.9em; cursor: pointer; white-space: nowrap; box-shadow: 0 0 8px rgba(212, 175, 55, 0.4);">
+                    Enter ↩
+                  </button>
+                </div>
+                <div id="commentMessage" style="display: none; margin-top: 16px; text-align: center; color: #2ecc71; font-size: 1.1em; font-weight: 600; padding: 12px; background: rgba(46, 204, 113, 0.15); border-radius: 8px; border: 1px solid rgba(46, 204, 113, 0.4);">
+                  ✓ Your Comment is Live for 1Hr!
+                </div>
+                
+                <!-- Help Desk Button -->
+                <button 
+                  id="helpDeskBtn" 
+                  onclick="window.openHelpDeskMail()"
+                  style="width: 100%; margin-top: 12px; background: linear-gradient(180deg, #d4af37 0%, #b89c2a 100%); color: #0a0f1a; border: none; border-radius: 8px; padding: 12px 20px; font-weight: 700; font-size: 0.9em; cursor: pointer; box-shadow: 0 0 8px rgba(212, 175, 55, 0.4);">
+                  Help Desk 📧
+                </button>
+                
+                <!-- Help Desk Mail Interface -->
+                <div id="helpDeskPanel" style="display: none; margin-top: 16px; padding: 16px; background: rgba(212, 175, 55, 0.15); border-radius: 12px; border: 1px solid rgba(212, 175, 55, 0.5);">
+                  <div style="color: #fff; font-size: 0.9em; font-weight: 600; margin-bottom: 12px;">Message to Operating Team:</div>
+                  <textarea 
+                    id="helpDeskMessage" 
+                    placeholder="Describe your issue or question..." 
+                    maxlength="500"
+                    style="width: 100%; min-height: 100px; padding: 12px; background: rgba(212, 175, 55, 0.3); color: #fff; border: 1px solid rgba(212, 175, 55, 0.7); border-radius: 8px; font-size: 0.95em; font-family: 'Poppins', sans-serif; resize: vertical; box-sizing: border-box;">
+                  </textarea>
+                  <div style="display: flex; gap: 12px; margin-top: 12px; justify-content: flex-end;">
+                    <button 
+                      id="cancelHelpDesk" 
+                      onclick="window.closeHelpDeskMail()"
+                      style="background: rgba(212, 175, 55, 0.3); color: #fff; border: 1px solid rgba(212, 175, 55, 0.7); border-radius: 8px; padding: 10px 16px; font-weight: 600; font-size: 0.85em; cursor: pointer;">
+                      Cancel
+                    </button>
+                    <button 
+                      id="submitHelpDesk" 
+                      onclick="window.submitHelpDeskMail()"
+                      style="background: linear-gradient(180deg, #d4af37 0%, #b89c2a 100%); color: #0a0f1a; border: none; border-radius: 8px; padding: 10px 16px; font-weight: 700; font-size: 0.85em; cursor: pointer; box-shadow: 0 0 8px rgba(212, 175, 55, 0.4);">
+                      Send 📨
+                    </button>
+                  </div>
+                </div>
+                
+                <!-- Help Desk Success Message -->
+                <div id="helpDeskSuccess" style="display: none; margin-top: 16px; text-align: center; color: #2ecc71; font-size: 1.1em; font-weight: 600; padding: 16px; background: rgba(46, 204, 113, 0.15); border-radius: 8px; border: 1px solid rgba(46, 204, 113, 0.4);">
+                  <div style="font-size: 1.2em; margin-bottom: 8px;">Thank you! 💚</div>
+                  <div style="font-size: 0.95em;">We'll get back to you soon...</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </section>
+
+      <div class="controller-wrapper" aria-hidden="false" style="position:relative; top:0.8cm; margin-top:-3.2em;">
+          <div class="journey" id="journey" style="margin-top:-0.7cm;">
+            <div class="track"></div>
+            <!-- JS will populate .dot elements here -->
+          </div>
+
+          <div class="controller-buttons">
+            <!-- Buttons are all present but CSS shows only the one for the current active page.
+               On Phase 3 none of these 'continue' buttons will show — the quiz uses its own #submitQuiz -->
+            <button id="goP2" class="cta continue-btn" style="background: linear-gradient(120deg, #b8860b 0%, #ffe066 80%, #fffbe6 100%) !important; color: #060606 !important; text-shadow: 0 0 2px #fcc200, 0 0 1px #fcc200, 1px 0 0 #fcc200, -1px 0 0 #fcc200, 0 1px 0 #fcc200, 0 -1px 0 #fcc200 !important; border-radius: 18px !important; box-shadow: 0 0 5px 2px #01010155, 0 1px 5px #06060644 !important; font-weight: 900 !important; position: relative;"> 
+              Continue <span class="arrow">→</span>
+              <div class="chainlock-overlay" id="goP2-chainlock-overlay"></div>
+            </button>
+            <button id="goP3" class="cta continue-btn" style="background: linear-gradient(90deg, #ff6b81, #ffd36e, #4efc8d); color: #fff; font-weight: 800; border: none;"> 
+              Continue <span class="arrow">→</span>
+            </button>
+            <button id="goP4" class="cta continue-btn" style="background: linear-gradient(90deg, #ff6b81, #ffd36e, #4efc8d); color: #fff; font-weight: 800; border: none;"> 
+              Continue <span class="arrow">→</span>
+            </button>
+            <button id="goP5" class="cta continue-btn" style="background: linear-gradient(90deg, #ff6b81, #ffd36e, #4efc8d); color: #fff; font-weight: 800; border: none;"> 
+              Continue <span class="arrow">→</span>
+            </button>
+            
+          </div>
+        </div>
+  <div id="bottom-space" style="width:100%;max-width:400px;margin:0 auto;height:0%;display:block;position:relative;background:transparent;margin-top:-0.4in;box-sizing:border-box;">
+  <img id="snowsurface-img" src="phase-1-media/snowsurface.webp" alt="Snow Surface" style="width:100%;height:1.1in;object-fit:cover;box-shadow:none;filter:drop-shadow(0 0px 0px rgb(0, 0, 0)) drop-shadow(0 0px 0px #080808aa);border-bottom-left-radius:18px;border-bottom-right-radius:0px;position:absolute;left:0;margin-bottom: -1.35in;z-index:1;display:block;max-width:400px;box-sizing:border-box;" />
+  <video id="ph5surface-video" src="site-asse-voices/ph5surface.mp4" autoplay loop muted playsinline style="width:100%;max-width:400px;height:1.3in;object-fit:cover;box-shadow:none;filter:drop-shadow(0 -6px 18px rgb(0, 0, 0)) drop-shadow(0 2px 12px #080808aa);border-bottom-left-radius:08px;border-bottom-right-radius:08px;position:absolute;left:0;margin-bottom: -5%;z-index:1;display:none;margin-top: 8px;box-sizing:border-box;"></video>
+  <script>
+    function updateSurfaceForPhase5() {
+      var p5 = document.getElementById('p5');
+      var snowImg = document.getElementById('snowsurface-img');
+      var ph5Video = document.getElementById('ph5surface-video');
+      if (p5 && p5.classList.contains('active')) {
+        snowImg.style.display = 'none';
+        ph5Video.style.display = 'block';
+      } else {
+        snowImg.style.display = 'block';
+        ph5Video.style.display = 'none';
+      }
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      updateSurfaceForPhase5();
+      var observer = new MutationObserver(updateSurfaceForPhase5);
+      observer.observe(document.body, { attributes: true, subtree: true, childList: true });
+    });
+  </script>
+    <div id="ph3s-video-wrap" style="width:100%;height:1.3in;position:absolute;left:0;margin-bottom: -5px;z-index:1;display:none;">
+      <video id="ph3s-video" src="site-asse-voices/ph3s.mp4" autoplay loop muted playsinline style="width:100%;height:100%;object-fit:cover;box-shadow:none;filter:drop-shadow(0 -6px 18px rgba(0, 0, 0, 0.533)) drop-shadow(0 2px 12px #030303aa);border-bottom-left-radius:2px;border-bottom-right-radius:2px;margin-bottom: -5.85px;margin-top: 12px;"></video>
+  <div style="position:absolute;left:0;top:0;width:100%;height:1in;pointer-events:none;background:linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.0) 100%);"></div>
+    </div>
+    <div id="snow-stack" style="position:absolute;left:0;bottom:0;width:100%;height:1.3in;pointer-events:none;z-index:0;">
+      <!-- Snowballs and snowflakes script removed for Phase 4 video only -->
+      <script>
+        function updateSnowStack() {
+          var p4 = document.getElementById('p4');
+          var snowStack = document.getElementById('snow-stack');
+          if (p4 && p4.classList.contains('active')) {
+            snowStack.style.display = 'none';
+          } else {
+            snowStack.style.display = 'block';
+          }
+        }
+        document.addEventListener('DOMContentLoaded', updateSnowStack);
+        var phaseEls = document.querySelectorAll('.screen');
+        phaseEls.forEach(function(el) {
+          var obs = new MutationObserver(updateSnowStack);
+          obs.observe(el, { attributes: true });
+        });
+      </script>
+            </div>
+          </div>
+          <script>
+            // Toggle bottom video/image/video based on phase
+            function updateBottomMedia() {
+              var p3 = document.getElementById('p3');
+              var p5 = document.getElementById('p5');
+              var img = document.getElementById('snowsurface-img');
+              var vidWrap = document.getElementById('ph3s-video-wrap');
+              var vid = document.getElementById('ph3s-video');
+              var vid5 = document.getElementById('ph5surface-video');
+              if (p3 && p3.classList.contains('active')) {
+                img.style.display = 'none';
+                vidWrap.style.display = 'block';
+                if (vid5) vid5.style.display = 'none';
+              } else if (p5 && p5.classList.contains('active')) {
+                img.style.display = 'none';
+                vidWrap.style.display = 'none';
+                if (vid5) vid5.style.display = 'block';
+              } else {
+                img.style.display = 'block';
+                vidWrap.style.display = 'none';
+                if (vid5) vid5.style.display = 'none';
+              }
+            }
+            document.addEventListener('DOMContentLoaded', updateBottomMedia);
+            var phaseEls = document.querySelectorAll('.screen');
+            phaseEls.forEach(function(el) {
+              var obs = new MutationObserver(updateBottomMedia);
+              obs.observe(el, { attributes: true });
+            });
+          </script>
+        </div>
+      </div>
+      </main>
+    </div>
+
+  <!-- PHASE 2 PAYHIP LOADER - Loaded before script.js, injected only on user interaction -->
+  <script src="./phase-2-payhip-loader.js" defer></script>
+  <script src="./script.js" defer></script>
+  <script src="./snow.js" defer></script>
+  
+  <!-- === LAZY LOAD IMAGES === -->
+  <script>
+    // Lazy load images for better performance
+    if ('IntersectionObserver' in window) {
+      const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            if (img.dataset.src) {
+              img.src = img.dataset.src;
+              img.removeAttribute('data-src');
+            }
+            observer.unobserve(img);
+          }
+        });
+      }, {
+        rootMargin: '50px'  // Start loading 50px before entering viewport
+      });
+      
+      // Observe all lazy images
+      document.querySelectorAll('.lazy-img').forEach(img => {
+        imageObserver.observe(img);
+      });
+      
+      console.log('✅ Lazy image loading enabled');
+    } else {
+      // Fallback for old browsers - load all images immediately
+      document.querySelectorAll('[data-src]').forEach(img => {
+        img.src = img.dataset.src;
+      });
+    }
+  </script>
+<script>
+// Phase 4: Reveal Destiny → Progress Calendar fade logic
+document.addEventListener('DOMContentLoaded', function() {
+  var spinDateBtn = document.getElementById('spinDate');
+  var showCalBtn = document.getElementById('showCal');
+  // Only run in Phase 4
+  if (!spinDateBtn || !showCalBtn) return;
+  spinDateBtn.addEventListener('click', function() {
+    // Fade out Reveal Destiny
+    spinDateBtn.style.transition = 'opacity 0.8s';
+    spinDateBtn.style.opacity = '0';
+    setTimeout(function() {
+      spinDateBtn.style.display = 'none';
+      // Fade in Progress Calendar after 4s
+      setTimeout(function() {
+        showCalBtn.style.display = '';
+        setTimeout(function() {
+          showCalBtn.style.opacity = '1';
+        }, 50);
+      }, 4000);
+    }, 800);
+  });
+  
+  // Progress Calendar button: download PDF and move to Phase 5
+  showCalBtn.addEventListener('click', function() {
+    console.log('*** Progress Calendar button clicked - Stopping V6 voice ***');
+    
+    // Stop V6 voice if it's playing when Progress Calendar button is clicked
+    if (typeof voiceV6 !== 'undefined' && voiceV6) {
+      voiceV6.pause();
+      voiceV6.currentTime = 0;
+      if (typeof bgMusic !== 'undefined' && bgMusic) {
+        bgMusic.volume = 0.4; // Restore background music volume
+      }
+    }
+    
+    console.log('*** Playing V7 voice in 2 seconds ***');
+    
+    // Play V7 voice after 2 seconds
+    setTimeout(function() {
+      console.log('*** Playing V7 voice NOW ***');
+      voiceV7.currentTime = 0;
+      voiceV7.volume = 1.0;
+      voiceV7.play().then(() => {
+        console.log('✓✓✓ V7 voice playing');
+      }).catch(e => {
+        console.error('✗ V7 voice FAILED:', e);
+      });
+    }, 2000);
+    
+    // Download the PDF
+    var link = document.createElement('a');
+    link.href = './site-asse-voices/progresscal.pdf';
+    link.download = 'progresscal.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    
+    // Move to Phase 5 after a short delay
+    setTimeout(function() {
+      document.getElementById('p4').classList.remove('active');
+      document.getElementById('p5').classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 500);
+  });
+});
+</script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const btn = document.getElementById('continueP4');
+      if (btn) {
+        btn.addEventListener('click', function() {
+          document.getElementById('p4').classList.remove('active');
+          document.getElementById('p5').classList.add('active');
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+    });
+  </script>
+    <div id="float" aria-hidden="true" style="display:none;position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);background:linear-gradient(90deg,#111827,#0b1220);color:#fff;padding:8px 12px;border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,0.6);font-weight:800;z-index:1200;">+0 BP</div>
+  <div class="bottom-mist-overlay"></div>
+
+  <!-- BLESSING VERSE PRO PAGE -->
+  <style>
+    .blessing-verse-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.65);
+      z-index: 999;
+      opacity: 0;
+      transition: opacity 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+      pointer-events: none;
+    }
+
+    .blessing-verse-overlay.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .blessing-verse-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(135deg, #1a1f3a 0%, #0f1528 100%);
+      opacity: 0;
+      transition: opacity 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+      pointer-events: none;
+    }
+
+    .blessing-verse-container.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .subscription-box {
+      position: sticky;
+      top: 0;
+      flex-shrink: 0;
+      background: linear-gradient(135deg, #2a3a5c 0%, #1f2d45 100%);
+      border-bottom: 2px solid rgba(121, 166, 255, 0.25);
+      padding: max(env(safe-area-inset-top), 20px) 16px 24px;
+      z-index: 100;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+    }
+
+    .subscription-title {
+      font-size: 1.8em;
+      font-weight: 900;
+      background: linear-gradient(90deg, #79a6ff 0%, #58e39a 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 12px;
+      letter-spacing: 0.02em;
+      text-align: center;
+    }
+
+    .subscription-price {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .subscription-price .amount {
+      font-size: 1.3em;
+      font-weight: 700;
+      color: #ff6b6b;
+      text-decoration: line-through;
+      opacity: 0.7;
+      display: inline-block;
+    }
+
+    .subscription-price .free-label {
+      font-size: 1.2em;
+      font-weight: 800;
+      color: #58e39a;
+      margin-left: 8px;
+      display: inline-block;
+      text-shadow: 0 0 12px rgba(88, 227, 154, 0.4);
+    }
+
+    .subscribe-btn {
+      width: 100%;
+      padding: 14px 20px;
+      background: linear-gradient(90deg, #4efc8d 0%, #58e39a 100%);
+      color: #0a0f1b;
+      border: none;
+      border-radius: 12px;
+      font-size: 1.1em;
+      font-weight: 900;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(88, 227, 154, 0.3);
+      transition: all 0.3s ease;
+      letter-spacing: 0.02em;
+    }
+
+    .subscribe-btn:hover {
+      background: linear-gradient(90deg, #58e39a 0%, #4efc8d 100%);
+      box-shadow: 0 12px 28px rgba(88, 227, 154, 0.5);
+      transform: translateY(-2px);
+    }
+
+    .subscribe-btn:active {
+      transform: translateY(0);
+    }
+
+    .btn-subtext {
+      text-align: center;
+      font-size: 0.8em;
+      color: #58e39a;
+      margin-top: 8px;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      opacity: 0.9;
+    }
+
+    .features-container {
+      flex: 1;
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding: 20px 12px;
+      padding-bottom: max(env(safe-area-inset-bottom), 24px);
+    }
+
+    .features-grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    .feature-row {
+      display: grid;
+      grid-template-columns: 0.35fr 0.65fr;
+      gap: 12px;
+      align-items: start;
+      padding: 14px;
+      background: linear-gradient(135deg, rgba(121, 166, 255, 0.08) 0%, rgba(88, 227, 154, 0.05) 100%);
+      border-left: 3px solid #79a6ff;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .feature-row:hover {
+      background: linear-gradient(135deg, rgba(121, 166, 255, 0.15) 0%, rgba(88, 227, 154, 0.12) 100%);
+      border-left-color: #58e39a;
+      box-shadow: 0 4px 16px rgba(121, 166, 255, 0.1);
+    }
+
+    .feature-name {
+      font-weight: 800;
+      font-size: 0.95em;
+      color: #79a6ff;
+      word-break: break-word;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .feature-emoji {
+      font-size: 1.3em;
+      flex-shrink: 0;
+    }
+
+    .feature-description {
+      font-size: 0.9em;
+      color: #a4add3;
+      line-height: 1.4;
+      word-wrap: break-word;
+      word-break: break-word;
+    }
+
+    .features-container::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .features-container::-webkit-scrollbar-track {
+      background: rgba(121, 166, 255, 0.05);
+      border-radius: 10px;
+    }
+
+    .features-container::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, #79a6ff, #58e39a);
+      border-radius: 10px;
+    }
+
+    .features-container::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(180deg, #58e39a, #79a6ff);
+    }
+
+    @media (max-width: 420px) {
+      .subscription-title {
+        font-size: 1.6em;
+      }
+
+      .subscription-box {
+        padding: max(env(safe-area-inset-top), 16px) 12px 20px;
+      }
+
+      .feature-row {
+        grid-template-columns: 0.4fr 0.6fr;
+        gap: 10px;
+        padding: 12px;
+      }
+
+      .feature-name {
+        font-size: 0.9em;
+      }
+
+      .feature-description {
+        font-size: 0.85em;
+      }
+
+      .subscribe-btn {
+        font-size: 1em;
+        padding: 12px 18px;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .subscription-title {
+        font-size: 1.4em;
+      }
+
+      .features-container {
+        padding: 16px 10px;
+      }
+
+      .feature-row {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 10px;
+      }
+
+      .feature-name {
+        font-size: 0.88em;
+      }
+
+      .feature-description {
+        font-size: 0.82em;
+      }
+
+      .subscription-price .amount,
+      .subscription-price .free-label {
+        font-size: 1.3em;
+      }
+    }
+  </style>
+
+  <div class="blessing-verse-overlay" id="bvOverlay"></div>
+  <div class="blessing-verse-container" id="bvContainer">
+    <div class="subscription-box">
+      <div class="subscription-title">Blessing Verse Pro</div>
+      <div class="subscription-price">
+        <span class="amount">$10/month</span>
+        <span class="free-label">Free Access</span>
+      </div>
+      <button class="subscribe-btn" id="subscribeBtn">Subscribe for Free</button>
+      <div class="btn-subtext">-20% PB/month</div>
+    </div>
+    <div class="features-container">
+      <div class="features-grid" id="featuresGrid">
+        <!-- Features will be populated by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const bvFeatures = [
+      { emoji: '🌌', name: 'MettaVerse', description: 'Main social world where players meet, talk, party, and explore.' },
+      { emoji: '🧍', name: 'Your Avatar', description: 'Create and customize your character.' },
+      { emoji: '💖', name: 'Companion', description: 'Your loyal partner unlocking hidden paths.' },
+      { emoji: '🏠', name: 'Personal Room', description: 'Private space with weekly gifts and upgrades.' },
+      { emoji: '🕊️', name: 'Confession Corner', description: 'Quiet place with Santa for clarity and comfort.' },
+      { emoji: '🎮', name: 'Arena Games', description: 'Mini-games to earn Blessing Points.' },
+      { emoji: '💰', name: 'Metrix Money', description: 'Capped fate rounds with low risk and high thrill.' },
+      { emoji: '⚔️', name: 'PvP Match', description: '1v1 battles; winner takes the pot.' },
+      { emoji: '📈', name: 'Investment Board', description: 'Pitch ideas and get pledges/skills.' },
+      { emoji: '🤝', name: 'Barter Zone', description: 'Trade skills with other players.' },
+      { emoji: '🎵', name: 'Music Corner', description: 'Relax with curated soundtracks.' },
+      { emoji: '💼', name: 'Metrix Growth', description: 'Safe-growth reward box.' },
+      { emoji: '🔥', name: 'Mini Game Zone', description: 'Quick fun games for light rewards.' },
+      { emoji: '✨', name: 'Daily Missions', description: 'Daily tasks for streaks and motivation.' },
+      { emoji: '📘', name: 'Weekly Gifts', description: 'Weekly books, routines, and tools.' },
+      { emoji: '💫', name: 'Secret Room', description: 'A mysterious locked area only a few can access.' },
+      { emoji: '👑', name: 'VIP Member', description: 'Special areas, items, and abilities.' },
+      { emoji: '💬', name: 'Presence Alert', description: 'Uplifting reminders outside the world.' }
+    ];
+
+    function initBlessingVerseFeatures() {
+      const grid = document.getElementById('featuresGrid');
+      if (!grid) return;
+      bvFeatures.forEach(feature => {
+        const row = document.createElement('div');
+        row.className = 'feature-row';
+        row.innerHTML = `
+          <div class="feature-name">
+            <span class="feature-emoji">${feature.emoji}</span>
+            <span>${feature.name}</span>
+          </div>
+          <div class="feature-description">${feature.description}</div>
+        `;
+        grid.appendChild(row);
+      });
+    }
+
+    function showBlessingVersePro() {
+      const overlay = document.getElementById('bvOverlay');
+      const container = document.getElementById('bvContainer');
+      const featuresContainer = document.querySelector('.features-container');
+      if (!overlay || !container) return;
+      
+      setTimeout(() => {
+        overlay.classList.add('show');
+        container.classList.add('show');
+        
+        // Start auto-scroll after modal is visible
+        if (featuresContainer) {
+          startAutoScroll(featuresContainer);
+        }
+      }, 100);
+    }
+
+    function startAutoScroll(container) {
+      let scrollTimeout;
+      let isScrolling = true;
+      
+      // Stop auto-scroll if user manually scrolls
+      const handleManualScroll = () => {
+        isScrolling = false;
+        container.removeEventListener('scroll', handleManualScroll);
+        if (scrollTimeout) clearTimeout(scrollTimeout);
+      };
+      
+      container.addEventListener('scroll', handleManualScroll);
+      
+      function performScroll() {
+        if (!isScrolling) return;
+        
+        // Scroll 4 inches (1 inch = 96px on standard displays, so 4 inches = 384px)
+        const scrollAmount = 384;
+        
+        // Check if we can still scroll
+        if (container.scrollTop + container.clientHeight < container.scrollHeight) {
+          container.scrollBy({
+            top: scrollAmount,
+            behavior: 'smooth'
+          });
+          
+          // Schedule next scroll after 3 seconds
+          scrollTimeout = setTimeout(performScroll, 3000);
+        } else {
+          // Reached the end, restart from top after 5 seconds
+          scrollTimeout = setTimeout(() => {
+            if (isScrolling) {
+              container.scrollTo({ top: 0, behavior: 'smooth' });
+              // Resume scrolling after reaching top
+              scrollTimeout = setTimeout(performScroll, 3000);
+            }
+          }, 5000);
+        }
+      }
+      
+      // Start first scroll after 5 seconds
+      scrollTimeout = setTimeout(performScroll, 5000);
+    }
+
+    function hideBlessingVersePro() {
+      const overlay = document.getElementById('bvOverlay');
+      const container = document.getElementById('bvContainer');
+      if (!overlay || !container) return;
+      
+      overlay.classList.remove('show');
+      container.classList.remove('show');
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      initBlessingVerseFeatures();
+      
+      const subscribeBtn = document.getElementById('subscribeBtn');
+      if (subscribeBtn) {
+        subscribeBtn.addEventListener('click', function() {
+          // Stop V5 voice if it's playing when Subscribe button is clicked
+          if (typeof voiceV5 !== 'undefined' && voiceV5) {
+            voiceV5.pause();
+            voiceV5.currentTime = 0;
+            if (typeof bgMusic !== 'undefined' && bgMusic) {
+              bgMusic.volume = 0.4; // Restore background music volume
+            }
+          }
+          
+          // Remove blur from Phase 3
+          const p3Element = document.getElementById('p3');
+          if (p3Element) {
+            p3Element.style.filter = '';
+          }
+          
+          hideBlessingVersePro();
+          
+          // Continue to Phase 4 after modal fades out
+          setTimeout(() => {
+            // Hide Phase 3 and show Phase 4
+            const p3 = document.getElementById('p3');
+            const p4 = document.getElementById('p4');
+            if (p3 && p4) {
+              p3.classList.remove('active');
+              p4.classList.add('active');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+          }, 300);
+        });
+      }
+    });
+
+    window.BlessingVersePro = {
+      show: showBlessingVersePro,
+      hide: hideBlessingVersePro
+    };
+  </script>
+        </div>
+      </div>
+    </div>
+<!-- 
+  Payment Webhook Integration - Add this to your index.html
+  Place before closing </body> tag
+-->
+
+<!-- Payment Tracking Scripts - Loaded dynamically in Phase 2 -->
+<!-- REMOVED: payment-tracker.js and payment-integration.js are now loaded by phase-2-payhip-loader.js after user interaction -->
+
+<script>
+  /**
+   * Initialize Payment Confirmation System
+   * 
+   * This script:
+   * 1. Listens for PayHip payment completions
+   * 2. Polls the webhook server for confirmation
+   * 3. Shows success/failure UI to users
+   * 4. Logs all transaction activity
+   */
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    console.log('🔗 Initializing Payment Webhook System...');
+    
+    // Initialize tracker with your server settings
+    // Wait for PaymentTracker to be available (loaded in Phase 2)
+    if (typeof PaymentTracker === 'undefined') {
+      console.warn('⚠️ PaymentTracker not yet loaded. Waiting for Phase 2...');
+      // Retry after a delay when Phase 2 loads
+      const checkTracker = setInterval(() => {
+        if (typeof PaymentTracker !== 'undefined') {
+          clearInterval(checkTracker);
+          initializePaymentTracker();
+        }
+      }, 500);
+      
+      // Define initialization function
+      function initializePaymentTracker() {
+        const tracker = new PaymentTracker({
+          webhookServer: 'http://blessingsjourney.xyz',  // Uses port 80 (default)
+          pollInterval: 3000,  // Check every 3 seconds
+          maxAttempts: 60      // Give user 3 minutes to complete payment
+        });
+        setupPaymentTracking(tracker);
+      }
+    } else {
+      const tracker = new PaymentTracker({
+        webhookServer: 'http://blessingsjourney.xyz',  // Uses port 80 (default)
+        pollInterval: 3000,  // Check every 3 seconds
+        maxAttempts: 60      // Give user 3 minutes to complete payment
+      });
+      setupPaymentTracking(tracker);
+    }
+    
+    function setupPaymentTracking(tracker) {
+    
+      // Check server connection on startup
+      fetch('http://blessingsjourney.xyz')
+        .then(r => r.json())
+        .then(() => {
+          console.log('✅ Webhook server is online');
+          document.body.classList.add('webhook-ready');
+        })
+        .catch(() => {
+          console.warn('⚠️ Webhook server not detected. Payment tracking disabled.');
+          document.body.classList.add('webhook-offline');
+        });
+    
+    // =====================================================
+    // Hook into PayHip Modal Events
+    // =====================================================
+    
+    // Monitor all PayHip iframes for form submission
+    const iframeSelector = 'iframe[id*="payhip-iframe"]';
+    
+    // Watch for PayHip completion (when modal closes after payment)
+    document.addEventListener('message', function(event) {
+      // PayHip iframe messages
+      if (event.origin.includes('payhip.com')) {
+        console.log('📩 PayHip Message:', event.data);
+        
+        // Different PayHip versions send different messages
+        if (event.data.type === 'payment_complete' || 
+            event.data.status === 'success' ||
+            event.data.message === 'completed') {
+          
+          const txnId = event.data.transaction_id || 'txn_' + Date.now();
+          console.log('🎯 Payment initiated, tracking ID:', txnId);
+          
+          // Store for later reference
+          sessionStorage.setItem('lastPaymentId', txnId);
+          
+          // Start confirmation polling
+          tracker.showPendingUI();
+          
+          tracker.pollForPayment(txnId, function(success, payment) {
+            const pending = document.getElementById('paymentPending');
+            if (pending) pending.remove();
+            
+            if (success) {
+              console.log('✅ Payment Confirmed!', payment);
+              tracker.showConfirmationUI(payment);
+              
+              // Trigger any post-purchase actions
+              if (window.onPaymentSuccess) {
+                window.onPaymentSuccess(payment);
+              }
+            } else {
+              console.error('❌ Could not confirm payment');
+              tracker.showFailedUI();
+              
+              if (window.onPaymentFailed) {
+                window.onPaymentFailed();
+              }
+            }
+          });
+        }
+      }
+    });
+    
+    // =====================================================
+    // Alternative: Manual Payment Tracking
+    // =====================================================
+    
+    // If automatic detection doesn't work, use manual tracking:
+    window.trackPaymentManually = function(transactionId) {
+      console.log('📊 Manually tracking payment:', transactionId);
+      
+      tracker.showPendingUI();
+      
+      tracker.pollForPayment(transactionId, function(success, payment) {
+        const pending = document.getElementById('paymentPending');
+        if (pending) pending.remove();
+        
+        if (success) {
+          tracker.showConfirmationUI(payment);
+        } else {
+          tracker.showFailedUI();
+        }
+      });
+    };
+    }
+    
+    // =====================================================
+    // Admin Functions (for testing/monitoring)
+    // =====================================================
+    
+    window.AdminPayments = {
+      // Check if webhook server is online
+      checkServer: async function() {
+        try {
+          const response = await fetch('http://blessingsjourney.xyz/health');
+          const data = await response.json();
+          console.log('✅ Server Status:', data);
+          return true;
+        } catch (e) {
+          console.error('❌ Server Offline');
+          return false;
+        }
+      },
+      
+      // Get all payment statistics
+      getStats: async function() {
+        try {
+          const response = await fetch('http://blessingsjourney.xyz/api/payment-stats');
+          const stats = await response.json();
+          console.table(stats);
+          return stats;
+        } catch (e) {
+          console.error('Error fetching stats:', e);
+        }
+      },
+      
+      // Get all payments
+      getAllPayments: async function() {
+        try {
+          const response = await fetch('http://blessingsjourney.xyz/api/payments');
+          const data = await response.json();
+          console.log(`Found ${data.total} payments:`);
+          console.table(data.payments);
+          return data;
+        } catch (e) {
+          console.error('Error fetching payments:', e);
+        }
+      },
+      
+      // Check specific payment
+      checkPayment: async function(transactionId) {
+        try {
+          const response = await fetch(
+            `http://blessingsjourney.xyz/api/payment/${transactionId}`
+          );
+          const data = await response.json();
+          if (data.found) {
+            console.log('✅ Payment Found:');
+            console.table(data.payment);
+          } else {
+            console.log('❌ Payment Not Found');
+          }
+          return data;
+        } catch (e) {
+          console.error('Error:', e);
+        }
+      },
+      
+      // Test webhook with sample payment
+      testWebhook: async function() {
+        const testData = {
+          event: 'sale_completed',
+          sale: {
+            amount: 5.00,
+            currency: 'USD',
+            transaction_id: 'test_' + Date.now(),
+            product_id: 'YP9Ep',
+            product_name: 'Gold Tier ($5)',
+            customer_email: 'test@example.com',
+            customer_name: 'Test User'
+          }
+        };
+        
+        try {
+          const response = await fetch('http://blessingsjourney.xyz/webhook/payhip', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(testData)
+          });
+          const result = await response.json();
+          console.log('✅ Test Webhook Result:', result);
+          return result;
+        } catch (e) {
+          console.error('❌ Webhook Test Failed:', e);
+        }
+      }
+    };
+    
+    console.log('💳 Payment System Ready!');
+    console.log('');
+    console.log('📊 Admin Commands:');
+    console.log('  AdminPayments.checkServer()  - Check if server is online');
+    console.log('  AdminPayments.getStats()     - Get payment statistics');
+    console.log('  AdminPayments.getAllPayments() - View all payments');
+    console.log('  AdminPayments.checkPayment(id) - Check specific payment');
+    console.log('  AdminPayments.testWebhook()  - Test webhook functionality');
+    console.log('');
+  });
+  
+  // =====================================================
+  // Post-Purchase Hooks (Customize as needed)
+  // =====================================================
+  
+  /**
+   * Called when payment is successfully confirmed
+   * Customize to handle post-purchase logic
+   */
+  window.onPaymentSuccess = function(payment) {
+    console.log('🎉 Payment Success Handler Called');
+    console.log('Customer:', payment.customerName);
+    console.log('Product:', payment.productName);
+    console.log('Amount:', payment.amount);
+    
+    // You can:
+    // - Update user account
+    // - Send confirmation email
+    // - Unlock premium features
+    // - Redirect to thank you page
+    // Example:
+    // window.location.href = '/thank-you?txn=' + payment.transactionId;
+  };
+  
+  /**
+   * Called when payment confirmation fails
+   * Customize to handle failed payment logic
+   */
+  window.onPaymentFailed = function() {
+    console.log('❌ Payment Failed Handler Called');
+    
+    // You can:
+    // - Show support contact info
+    // - Offer to retry
+    // - Log for manual review
+  };
+ 
+</script>
+
+<!-- 
+  SETUP INSTRUCTIONS:
+  
+  1. Make sure server.js is running:
+     npm start
+  
+  2. Configure PayHip webhook:
+     Dashboard → Settings → Webhooks
+     URL: http://blessingsjourney.xyz/webhook/payhip
+     Event: Sale Completed
+  
+  3. For admin testing, open browser console and use:
+     AdminPayments.checkServer()
+     AdminPayments.getStats()
+  
+  4. For production, update these URLs:
+     - webhookServer in payment-tracker.js
+     - Webhook URL in PayHip dashboard
+-->
+</body>
+</html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blessing Verse Pro - Subscription</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      font-family: 'Inter', 'Roboto', 'Montserrat', Arial, sans-serif;
+      background: radial-gradient(120vw 90vw at 20% -10%, #1a2350 0%, #0a0f1b 60%);
+      color: #eaf0ff;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    body {
+      width: 100vw;
+      max-width: 100vw;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    /* OVERLAY BACKGROUND (for page transition effect) */
+    .blessing-verse-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.65);
+      z-index: 999;
+      opacity: 0;
+      transition: opacity 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+      pointer-events: none;
+    }
+
+    .blessing-verse-overlay.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* MAIN CONTAINER */
+    .blessing-verse-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(135deg, #1a1f3a 0%, #0f1528 100%);
+      opacity: 0;
+      transition: opacity 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+      pointer-events: none;
+    }
+
+    .blessing-verse-container.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* STICKY SUBSCRIPTION BOX */
+    .subscription-box {
+      position: sticky;
+      top: 0;
+      flex-shrink: 0;
+      background: linear-gradient(135deg, #2a3a5c 0%, #1f2d45 100%);
+      border-bottom: 2px solid rgba(121, 166, 255, 0.25);
+      padding: max(env(safe-area-inset-top), 20px) 16px 24px;
+      z-index: 100;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+    }
+
+    .subscription-title {
+      font-size: 1.8em;
+      font-weight: 900;
+      background: linear-gradient(90deg, #79a6ff 0%, #58e39a 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 12px;
+      letter-spacing: 0.02em;
+      text-align: center;
+    }
+
+    .subscription-price {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .subscription-price .amount {
+      font-size: 1.3em;
+      font-weight: 700;
+      color: #ff6b6b;
+      text-decoration: line-through;
+      opacity: 0.7;
+      display: inline-block;
+    }
+
+    .subscription-price .free-label {
+      font-size: 1.2em;
+      font-weight: 800;
+      color: #58e39a;
+      margin-left: 8px;
+      display: inline-block;
+      text-shadow: 0 0 12px rgba(88, 227, 154, 0.4);
+    }
+
+    .subscribe-btn {
+      width: 100%;
+      padding: 14px 20px;
+      background: linear-gradient(90deg, #4efc8d 0%, #58e39a 100%);
+      color: #0a0f1b;
+      border: none;
+      border-radius: 12px;
+      font-size: 1.1em;
+      font-weight: 900;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(88, 227, 154, 0.3);
+      transition: all 0.3s ease;
+      letter-spacing: 0.02em;
+    }
+
+    .subscribe-btn:hover {
+      background: linear-gradient(90deg, #58e39a 0%, #4efc8d 100%);
+      box-shadow: 0 12px 28px rgba(88, 227, 154, 0.5);
+      transform: translateY(-2px);
+    }
+
+    .subscribe-btn:active {
+      transform: translateY(0);
+    }
+
+    /* FEATURES CONTAINER */
+    .features-container {
+      flex: 1;
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding: 20px 12px;
+      padding-bottom: max(env(safe-area-inset-bottom), 24px);
+    }
+
+    .features-grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    .feature-row {
+      display: grid;
+      grid-template-columns: 0.35fr 0.65fr;
+      gap: 12px;
+      align-items: start;
+      padding: 14px;
+      background: linear-gradient(135deg, rgba(121, 166, 255, 0.08) 0%, rgba(88, 227, 154, 0.05) 100%);
+      border-left: 3px solid #79a6ff;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .feature-row:hover {
+      background: linear-gradient(135deg, rgba(121, 166, 255, 0.15) 0%, rgba(88, 227, 154, 0.12) 100%);
+      border-left-color: #58e39a;
+      box-shadow: 0 4px 16px rgba(121, 166, 255, 0.1);
+    }
+
+    .feature-name {
+      font-weight: 800;
+      font-size: 0.95em;
+      color: #79a6ff;
+      word-break: break-word;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .feature-emoji {
+      font-size: 1.3em;
+      flex-shrink: 0;
+    }
+
+    .feature-description {
+      font-size: 0.9em;
+      color: #a4add3;
+      line-height: 1.4;
+      word-wrap: break-word;
+      word-break: break-word;
+    }
+
+    /* SCROLLBAR STYLING */
+    .features-container::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .features-container::-webkit-scrollbar-track {
+      background: rgba(121, 166, 255, 0.05);
+      border-radius: 10px;
+    }
+
+    .features-container::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, #79a6ff, #58e39a);
+      border-radius: 10px;
+    }
+
+    .features-container::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(180deg, #58e39a, #79a6ff);
+    }
+
+    /* RESPONSIVE ADJUSTMENTS */
+    @media (max-width: 420px) {
+      .subscription-title {
+        font-size: 1.6em;
+      }
+
+      .subscription-box {
+        padding: max(env(safe-area-inset-top), 16px) 12px 20px;
+      }
+
+      .feature-row {
+        grid-template-columns: 0.4fr 0.6fr;
+        gap: 10px;
+        padding: 12px;
+      }
+
+      .feature-name {
+        font-size: 0.9em;
+      }
+
+      .feature-description {
+        font-size: 0.85em;
+      }
+
+      .subscribe-btn {
+        font-size: 1em;
+        padding: 12px 18px;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .subscription-title {
+        font-size: 1.4em;
+      }
+
+      .features-container {
+        padding: 16px 10px;
+      }
+
+      .feature-row {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 10px;
+      }
+
+      .feature-name {
+        font-size: 0.88em;
+      }
+
+      .feature-description {
+        font-size: 0.82em;
+      }
+
+      .subscription-price .amount,
+      .subscription-price .free-label {
+        font-size: 1.1em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- OVERLAY BACKGROUND -->
+<div class="blessing-verse-overlay" id="bvOverlay"></div>
+
+<!-- MAIN CONTAINER -->
+<div class="blessing-verse-container" id="bvContainer">
+  <!-- STICKY SUBSCRIPTION BOX -->
+  <div class="subscription-box">
+    <div class="subscription-title">Blessing Verse Pro</div>
+    <div class="subscription-price">
+      <span class="amount">$10/month</span>
+      <span class="free-label">Free Access</span>
+    </div>
+    <button class="subscribe-btn" id="subscribeBtn">Subscribe for Free</button>
+  </div>
+
+  <!-- FEATURES CONTAINER -->
+  <div class="features-container">
+    <div class="features-grid" id="featuresGrid">
+      <!-- Features will be populated by JavaScript -->
+    </div>
+  </div>
+</div>
+
+<script>
+  // Feature data
+  const features = [
+    { emoji: '🌌', name: 'MettaVerse', description: 'Main social world where players meet, talk, party, and explore.' },
+    { emoji: '🧍', name: 'Your Avatar', description: 'Create and customize your character.' },
+    { emoji: '💖', name: 'Companion', description: 'Your loyal partner unlocking hidden paths.' },
+    { emoji: '🏠', name: 'Personal Room', description: 'Private space with weekly gifts and upgrades.' },
+    { emoji: '🕊️', name: 'Confession Corner', description: 'Quiet place with Santa for clarity and comfort.' },
+    { emoji: '🎮', name: 'Arena Games', description: 'Mini-games to earn Blessing Points.' },
+    { emoji: '💰', name: 'Metrix Money', description: 'Capped fate rounds with low risk and high thrill.' },
+    { emoji: '⚔️', name: 'PvP Match', description: '1v1 battles; winner takes the pot.' },
+    { emoji: '📈', name: 'Investment Board', description: 'Pitch ideas and get pledges/skills.' },
+    { emoji: '🤝', name: 'Barter Zone', description: 'Trade skills with other players.' },
+    { emoji: '🎵', name: 'Music Corner', description: 'Relax with curated soundtracks.' },
+    { emoji: '💼', name: 'Metrix Growth', description: 'Safe-growth reward box.' },
+    { emoji: '🔥', name: 'Mini Game Zone', description: 'Quick fun games for light rewards.' },
+    { emoji: '✨', name: 'Daily Missions', description: 'Daily tasks for streaks and motivation.' },
+    { emoji: '📘', name: 'Weekly Gifts', description: 'Weekly books, routines, and tools.' },
+    { emoji: '💫', name: 'Secret Room', description: 'A mysterious locked area only a few can access.' },
+    { emoji: '👑', name: 'VIP Member', description: 'Special areas, items, and abilities.' },
+    { emoji: '💬', name: 'Presence Alert', description: 'Uplifting reminders outside the world.' }
+  ];
+
+  // Initialize features grid
+  function initializeFeatures() {
+    const grid = document.getElementById('featuresGrid');
+    features.forEach(feature => {
+      const row = document.createElement('div');
+      row.className = 'feature-row';
+      row.innerHTML = `
+        <div class="feature-name">
+          <span class="feature-emoji">${feature.emoji}</span>
+          <span>${feature.name}</span>
+        </div>
+        <div class="feature-description">${feature.description}</div>
+      `;
+      grid.appendChild(row);
+    });
+  }
+
+  // Show subscription page with fade-in animation
+  function showBlessingVersePro() {
+    const overlay = document.getElementById('bvOverlay');
+    const container = document.getElementById('bvContainer');
+    
+    // Trigger fade-in
+    setTimeout(() => {
+      overlay.classList.add('show');
+      container.classList.add('show');
+    }, 100);
+  }
+
+  // Hide subscription page with fade-out animation
+  function hideBlessingVersePro() {
+    const overlay = document.getElementById('bvOverlay');
+    const container = document.getElementById('bvContainer');
+    
+    overlay.classList.remove('show');
+    container.classList.remove('show');
+  }
+
+  // Subscribe button handler
+  document.getElementById('subscribeBtn').addEventListener('click', function() {
+    alert('Subscription confirmed! Welcome to Blessing Verse Pro.');
+    hideBlessingVersePro();
+  });
+
+  // Initialize on page load
+  document.addEventListener('DOMContentLoaded', function() {
+    initializeFeatures();
+    // Uncomment the line below to show the page on load for testing
+    // showBlessingVersePro();
+  });
+
+  // Export functions for integration with main app
+  window.BlessingVersePro = {
+    show: showBlessingVersePro,
+    hide: hideBlessingVersePro
+  };
+</script>
+
+</body>
+</html>

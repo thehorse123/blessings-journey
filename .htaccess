@@ -1,0 +1,89 @@
+# UTF-8 Character Encoding Fix for Emojis and Special Characters
+# This .htaccess file ensures all content is served with UTF-8 encoding
+
+# Force UTF-8 encoding for all files
+AddDefaultCharset UTF-8
+
+# Set UTF-8 for specific file types
+<IfModule mod_mime.c>
+  AddCharset UTF-8 .html
+  AddCharset UTF-8 .htm
+  AddCharset UTF-8 .js
+  AddCharset UTF-8 .css
+  AddCharset UTF-8 .json
+  AddCharset UTF-8 .xml
+  AddCharset UTF-8 .php
+  AddCharset UTF-8 .txt
+</IfModule>
+
+# Add Content-Type header with UTF-8 for HTML files
+<FilesMatch "\.(html|htm)$">
+  Header set Content-Type "text/html; charset=UTF-8"
+</FilesMatch>
+
+# Add Content-Type header with UTF-8 for JavaScript files
+<FilesMatch "\.(js)$">
+  Header set Content-Type "text/javascript; charset=UTF-8"
+</FilesMatch>
+
+# Add Content-Type header with UTF-8 for CSS files
+<FilesMatch "\.(css)$">
+  Header set Content-Type "text/css; charset=UTF-8"
+</FilesMatch>
+
+# Add Content-Type header with UTF-8 for JSON files
+<FilesMatch "\.(json)$">
+  Header set Content-Type "application/json; charset=UTF-8"
+</FilesMatch>
+
+# Ensure mod_headers is enabled
+<IfModule mod_headers.c>
+  # Add Vary: Accept-Encoding header for all content
+  Header append Vary Accept-Encoding
+</IfModule>
+
+# Enable gzip compression (optional but recommended)
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE text/xml
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/json
+</IfModule>
+# Force HTTPS
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+# Security Headers
+Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+Header always set X-Content-Type-Options "nosniff"
+Header always set X-Frame-Options "SAMEORIGIN"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+# Browser Caching
+<FilesMatch "\.(jpg|jpeg|png|gif|ico|css|js|woff|woff2)$">
+    Header set Cache-Control "max-age=31536000, public, immutable"
+</FilesMatch>
+
+# Compress text files
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+</IfModule>
+
+# Prevent directory listing
+Options -Indexes
+
+# Custom Error Pages
+ErrorDocument 404 /404.html
+ErrorDocument 500 /500.html
+# Force ALL content to HTTPS
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+# Force HTTPS for all resources
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]

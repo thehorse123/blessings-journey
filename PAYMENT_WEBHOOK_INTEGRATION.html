@@ -1,0 +1,275 @@
+<!-- 
+  Payment Webhook Integration - Add this to your index.html
+  Place before closing </body> tag
+-->
+
+<!-- Payment Tracking Scripts -->
+<script src="payment-tracker.js"></script>
+<script src="payment-integration.js"></script>
+
+<script>
+  /**
+   * Initialize Payment Confirmation System
+   * 
+   * This script:
+   * 1. Listens for PayHip payment completions
+   * 2. Polls the webhook server for confirmation
+   * 3. Shows success/failure UI to users
+   * 4. Logs all transaction activity
+   */
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    console.log('🔗 Initializing Payment Webhook System...');
+    
+    // Initialize tracker with your server settings
+    const tracker = new PaymentTracker({
+      webhookServer: 'http://localhost:3000',  // Change to your server URL
+      pollInterval: 3000,  // Check every 3 seconds
+      maxAttempts: 60      // Give user 3 minutes to complete payment
+    });
+    
+    // Check server connection on startup
+    fetch('http://localhost:3000/health')
+      .then(r => r.json())
+      .then(() => {
+        console.log('✅ Webhook server is online');
+        document.body.classList.add('webhook-ready');
+      })
+      .catch(() => {
+        console.warn('⚠️ Webhook server not detected. Payment tracking disabled.');
+        document.body.classList.add('webhook-offline');
+      });
+    
+    // =====================================================
+    // Hook into PayHip Modal Events
+    // =====================================================
+    
+    // Monitor all PayHip iframes for form submission
+    const iframeSelector = 'iframe[id*="payhip-iframe"]';
+    
+    // Watch for PayHip completion (when modal closes after payment)
+    document.addEventListener('message', function(event) {
+      // PayHip iframe messages
+      if (event.origin.includes('payhip.com')) {
+        console.log('📩 PayHip Message:', event.data);
+        
+        // Different PayHip versions send different messages
+        if (event.data.type === 'payment_complete' || 
+            event.data.status === 'success' ||
+            event.data.message === 'completed') {
+          
+          const txnId = event.data.transaction_id || 'txn_' + Date.now();
+          console.log('🎯 Payment initiated, tracking ID:', txnId);
+          
+          // Store for later reference
+          sessionStorage.setItem('lastPaymentId', txnId);
+          
+          // Start confirmation polling
+          tracker.showPendingUI();
+          
+          tracker.pollForPayment(txnId, function(success, payment) {
+            const pending = document.getElementById('paymentPending');
+            if (pending) pending.remove();
+            
+            if (success) {
+              console.log('✅ Payment Confirmed!', payment);
+              tracker.showConfirmationUI(payment);
+              
+              // Trigger any post-purchase actions
+              if (window.onPaymentSuccess) {
+                window.onPaymentSuccess(payment);
+              }
+            } else {
+              console.error('❌ Could not confirm payment');
+              tracker.showFailedUI();
+              
+              if (window.onPaymentFailed) {
+                window.onPaymentFailed();
+              }
+            }
+          });
+        }
+      }
+    });
+    
+    // =====================================================
+    // Alternative: Manual Payment Tracking
+    // =====================================================
+    
+    // If automatic detection doesn't work, use manual tracking:
+    window.trackPaymentManually = function(transactionId) {
+      console.log('📊 Manually tracking payment:', transactionId);
+      
+      tracker.showPendingUI();
+      
+      tracker.pollForPayment(transactionId, function(success, payment) {
+        const pending = document.getElementById('paymentPending');
+        if (pending) pending.remove();
+        
+        if (success) {
+          tracker.showConfirmationUI(payment);
+        } else {
+          tracker.showFailedUI();
+        }
+      });
+    };
+    
+    // =====================================================
+    // Admin Functions (for testing/monitoring)
+    // =====================================================
+    
+    window.AdminPayments = {
+      // Check if webhook server is online
+      checkServer: async function() {
+        try {
+          const response = await fetch('http://localhost:3000/health');
+          const data = await response.json();
+          console.log('✅ Server Status:', data);
+          return true;
+        } catch (e) {
+          console.error('❌ Server Offline');
+          return false;
+        }
+      },
+      
+      // Get all payment statistics
+      getStats: async function() {
+        try {
+          const response = await fetch('http://localhost:3000/api/payment-stats');
+          const stats = await response.json();
+          console.table(stats);
+          return stats;
+        } catch (e) {
+          console.error('Error fetching stats:', e);
+        }
+      },
+      
+      // Get all payments
+      getAllPayments: async function() {
+        try {
+          const response = await fetch('http://localhost:3000/api/payments');
+          const data = await response.json();
+          console.log(`Found ${data.total} payments:`);
+          console.table(data.payments);
+          return data;
+        } catch (e) {
+          console.error('Error fetching payments:', e);
+        }
+      },
+      
+      // Check specific payment
+      checkPayment: async function(transactionId) {
+        try {
+          const response = await fetch(
+            `http://localhost:3000/api/payment/${transactionId}`
+          );
+          const data = await response.json();
+          if (data.found) {
+            console.log('✅ Payment Found:');
+            console.table(data.payment);
+          } else {
+            console.log('❌ Payment Not Found');
+          }
+          return data;
+        } catch (e) {
+          console.error('Error:', e);
+        }
+      },
+      
+      // Test webhook with sample payment
+      testWebhook: async function() {
+        const testData = {
+          event: 'sale_completed',
+          sale: {
+            amount: 5.00,
+            currency: 'USD',
+            transaction_id: 'test_' + Date.now(),
+            product_id: 'YP9Ep',
+            product_name: 'Gold Tier ($5)',
+            customer_email: 'test@example.com',
+            customer_name: 'Test User'
+          }
+        };
+        
+        try {
+          const response = await fetch('http://localhost:3000/webhook/payhip', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(testData)
+          });
+          const result = await response.json();
+          console.log('✅ Test Webhook Result:', result);
+          return result;
+        } catch (e) {
+          console.error('❌ Webhook Test Failed:', e);
+        }
+      }
+    };
+    
+    console.log('💳 Payment System Ready!');
+    console.log('');
+    console.log('📊 Admin Commands:');
+    console.log('  AdminPayments.checkServer()  - Check if server is online');
+    console.log('  AdminPayments.getStats()     - Get payment statistics');
+    console.log('  AdminPayments.getAllPayments() - View all payments');
+    console.log('  AdminPayments.checkPayment(id) - Check specific payment');
+    console.log('  AdminPayments.testWebhook()  - Test webhook functionality');
+    console.log('');
+  });
+  
+  // =====================================================
+  // Post-Purchase Hooks (Customize as needed)
+  // =====================================================
+  
+  /**
+   * Called when payment is successfully confirmed
+   * Customize to handle post-purchase logic
+   */
+  window.onPaymentSuccess = function(payment) {
+    console.log('🎉 Payment Success Handler Called');
+    console.log('Customer:', payment.customerName);
+    console.log('Product:', payment.productName);
+    console.log('Amount:', payment.amount);
+    
+    // You can:
+    // - Update user account
+    // - Send confirmation email
+    // - Unlock premium features
+    // - Redirect to thank you page
+    // Example:
+    // window.location.href = '/thank-you?txn=' + payment.transactionId;
+  };
+  
+  /**
+   * Called when payment confirmation fails
+   * Customize to handle failed payment logic
+   */
+  window.onPaymentFailed = function() {
+    console.log('❌ Payment Failed Handler Called');
+    
+    // You can:
+    // - Show support contact info
+    // - Offer to retry
+    // - Log for manual review
+  };
+</script>
+
+<!-- 
+  SETUP INSTRUCTIONS:
+  
+  1. Make sure server.js is running:
+     npm start
+  
+  2. Configure PayHip webhook:
+     Dashboard → Settings → Webhooks
+     URL: http://localhost:3000/webhook/payhip
+     Event: Sale Completed
+  
+  3. For admin testing, open browser console and use:
+     AdminPayments.checkServer()
+     AdminPayments.getStats()
+  
+  4. For production, update these URLs:
+     - webhookServer in payment-tracker.js
+     - Webhook URL in PayHip dashboard
+-->
